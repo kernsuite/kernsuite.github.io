@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KERN - Radio Astronomy Software Suite</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link href="kern.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <div class="container">
+      <div class="jumbotron" >
+          <img src="kern_small.jpg">
+          <h1>KERN - FAQ</h1>
+      </div>
+      <div class="row marketing">
+          <div class="col-lg-12">
+          <h3>What is KERN?</h3>
+
+          <p>KERN is a bi-annually release set of radio astronomical binary software packages. It should contain most of the required tools that a radio astronomer require for setting up a data reduction pipeline.</p>
+
+          <p>KERN is just a set of packages, but maybe in the future derivates like container (docker) images will be created.</p>
+
+
+          <h3>What is the audience for KERN?</h3>
+
+          <p>KERN is intended to be used by scientists who want to work with Radio Astronomical data. </p>
+
+
+
+          <h3>How does the release schema looks like?</h3>
+
+          <p>We will have a cutting edge repository that will be updated with the latest packages. Every half year we will freeze this repository and do a KERN release. This release will then only contain critical bug fixes but not functional changes. This all to guarantee scientific reproducibility.</p>
+
+
+          <h3>How do I install KERN?</h3>
+
+          <p>Follow the installation instructions.</p>
+
+
+          <h3>How do I request an update or the inclusion of a package in KERN?</h3>
+
+          <p>Open up a bug report in our issue tracker. Note that we don't add packages to an existing release. Also an existing KERN release is only updated when there is a dramatically serious problem.</p>
+
+
+
+          <h3>Why did the first KERN release get version number 2?</h3>
+
+          <p>The predecessor of KERN is the radio-astro PPA hosted at launchpad:
+
+          https://launchpad.net/~radio-astro/+archive/ubuntu/main</p>
+
+          <p>We name this repo KERN-1 and leave it as it is now.</p>
+
+
+
+          <h3>What are the requirements?</h3>
+
+          <p>For now we base KERN on the latest Ubuntu LTS with a delay of 6 months up to a year. For KERN-1 this is Ubuntu 14.04, KERN-2 will be based on Ubuntu 16.04. We might switch the package base to something more flexible in the future though.</p>
+
+
+
+
+          <h3>Can I mix KERN releases?</h3>
+
+          <p>No, This is a really bad idea.</p>
+
+
+
+
+          <h3>When is the next KERN version released?</h3>
+
+          <p>There is no fixed release date, but we intent to release a KERN release every 6 months.</p>
+
+
+
+
+      </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
