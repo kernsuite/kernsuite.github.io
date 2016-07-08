@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,19 +12,122 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <link href="kern.css" rel="stylesheet">
-  </head>
-  <body>
+</head>
+<body>
 
-  <div class="container">
-      <div class="jumbotron" >
-          <h1>KERN</h1>
-          <h3>Radio Astronomy Software Suite</h3>
-        <img src="kern.jpg">
-        <p class="lead">Coming soon to a laptop or cluster near you. <A href="faq.html">FAQ</a></p>
-        <p><small><a href="https://www.flickr.com/photos/argonne/14259873660">image license</a></small></p>
-      </div>
+<div class="jumbotron">
+    <div class="container">
+
+        <img src="kern_small.jpg">
+        <h1>KERN</h1>
+        <p1>The Radio Astronomy Software Suite</p1>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h3>What is KERN?</h3>
+
+            <p>
+                KERN is a bi-annually release set of radio astronomical binary software packages. It should contain
+                most of the required tools that a radio astronomer require for setting up a data reduction
+                pipeline.
+            </p>
+
+
+            <h3>What does the name KERN mean?</h3>
+            <p>KERN means 'core' in Dutch and Afrikaans.</p>
+
+            <h3>For who is KERN made?</h3>
+            <p>KERN is intended to be used by astronomers who want to work with radio telescope data. </p>
+
+            <h3>How do I use it?</h3>
+            <p>
+            You can use our current development tree on Ubuntu 16.04:
+
+                <pre>
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s ppa:kernsuite/kern-dev
+$ sudo apt-get update
+$ sudo apt-get [package]</pre>
+
+
+            You can use KERN-0 (previously known as the radio-astro PPA on Ubuntu 14.04:
+
+                <pre>
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s ppa:radio-astro/main
+$ sudo apt-get update
+$ sudo apt-get [package]</pre>
+
+            <h3>How does the release schema looks like?</h3>
+
+            <p>
+                We have a cutting edge repository that will be updated with the latest packages. Every half year
+                we will freeze this repository and do a KERN release. This release will then only contain critical
+                bug fixes but not functional changes. This all to guarantee scientific reproducibility.
+            </p>
+
+            <h3>What about docker images?</h3>
+            <p>
+                we have prepared easy to use base docker image which you can use to create custom docker images
+                containers all the KERN packages combined with your own scripts.
+            </p>
+
+            <p>The Dockerfile below is all you need to setup a docker container for any of the packages in kern:</p>
+            <pre>FROM kernsuite/base:dev
+RUN docker-apt-install aoflagger</pre>
+
+            <p>Since it is close to impossible to make working debian packages for NRAO CASA we have created
+            sperate docker images for this software package. It is available from the docker hub:</p>
+<pre>$ docker run -ti radioastro/casa:4.6</pre>
+
+            <h3>How do I request an update or the inclusion of a package in KERN?</h3>
+            <p>
+                Open up a bug report in our <a href="https://github.com/kernsuite/packaging">packaging issue tracker</a>.
+                Note that we don't add packages to an existing release. Also an existing KERN release is only updated
+                when there is a dramatically serious problem.</p>
+
+
+            <h3>Why did the first KERN release get version number 0?</h3>
+            <p>The predecessor of KERN is the radio-astro PPA hosted at launchpad:
+
+                https://launchpad.net/~radio-astro/+archive/ubuntu/main</p>
+
+            <p>We name this repo KERN-0 and leave it as it is now.</p>
+
+
+            <h3>Why Ubuntu 16.04?</h3>
+            <p>
+                Ubuntu is one of the mostly used Linux distributions in (radio) astronomy. For now we base KERN on the
+                latest Ubuntu LTS with a delay of 6 months up to a year. For KERN-0 this was Ubuntu 14.04, KERN-1 will
+                be based on Ubuntu 16.04.</p>
+
+
+            <h3>Can I mix KERN releases?</h3>
+            <p>No, This is a really bad idea.</p>
+
+
+            <h3>When is the next KERN version released?</h3>
+
+            <p>There is no fixed release date, but we intent to release a KERN release every 6 months.</p>
+
+            <h3>I use KERN. How do I cite you?</h3>
+            <p>We are working on a paper, but it is not finished yet.</p>
+
+            <h3>Important links</h3>
+            <a href="https://launchpad.net/~kernsuite">The Lauchpad PPA account</a><br>
+            <a href="https://github.com/kernsuite">KERN github group</a><br>
+            <a href="https://twitter.com/kernsuite">KERN on twitter</a><br>
+            <a href="https://hub.docker.com/u/kernsuite/">KERN on Docker hub</a><br>
+            <a href="https://github.com/kernsuite-debian">KERN debian source repositories</a><br>
+            <a href="https://github.com/kernsuite-docker">KERN docker file repositories</a><br>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
