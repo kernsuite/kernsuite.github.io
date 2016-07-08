@@ -27,21 +27,14 @@
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-8  col-md-offset-2">
             <h3>What is KERN?</h3>
 
             <p>
-                KERN is a bi-annually release set of radio astronomical binary software packages. It should contain
+                KERN is a bi-annually released set of radio astronomical binary software packages. It should contain
                 most of the required tools that a radio astronomer require for setting up a data reduction
                 pipeline.
             </p>
-
-
-            <h3>What does the name KERN mean?</h3>
-            <p>KERN means 'core' in Dutch and Afrikaans.</p>
-
-            <h3>For who is KERN made?</h3>
-            <p>KERN is intended to be used by astronomers who want to work with radio telescope data. </p>
 
             <h3>How do I use it?</h3>
             <p>
@@ -62,6 +55,18 @@ $ sudo add-apt-repository -s ppa:radio-astro/main
 $ sudo apt-get update
 $ sudo apt-get [package]</pre>
 
+            <h3>What packages are available?</h3>
+            <p>Have a look at the <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-dev">archive</a> itself
+            to see the list of current packages.</p>
+
+            <h3>What does the name KERN mean?</h3>
+            <p>KERN means 'core' in Dutch and Afrikaans.</p>
+
+            <h3>For who is KERN made?</h3>
+            <p>KERN is intended to be used by astronomers who want to work with radio telescope data. </p>
+
+
+
             <h3>How does the release schema looks like?</h3>
 
             <p>
@@ -81,7 +86,7 @@ $ sudo apt-get [package]</pre>
 RUN docker-apt-install aoflagger</pre>
 
             <p>Since it is close to impossible to make working debian packages for NRAO CASA we have created
-            sperate docker images for this software package. It is available from the docker hub:</p>
+            separate docker images for this software package. It is available from the docker hub:</p>
 <pre>$ docker run -ti radioastro/casa:4.6</pre>
 
             <h3>How do I request an update or the inclusion of a package in KERN?</h3>
