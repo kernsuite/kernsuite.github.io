@@ -32,8 +32,14 @@
 
             <p>
                 KERN is a bi-annually released set of radio astronomical software packages. It should contain
-                most of the tools that a radio astronomer needs to work with radio telescope data.
+                most of the tools that a radio astronomer needs to work with radio telescope data. We are working
+                hard to get the first release out soon.
             </p>
+
+            <div class="alert alert-warning" role="alert"><b>attention:</b> Please try out the development version and
+                report any issues on the <a href="https://github.com/kernsuite/packaging/issues">issue tracker</a>. When no
+                issues are reported we will issue our first release.
+            </div>
 
             <h3>How do I use it?</h3>
             <p>
@@ -59,8 +65,8 @@ $ sudo apt-get install [package]</pre>
             to see the list of current packages.</p>
 
             <h3>Why should I use KERN?</h3>
-            <p>to save time and frustration setting up your scientific pipeline. Also it helps you to perform
-            your science in a more deterministic and reproducible workflow.</p>
+            <p>to save time and frustration setting up your scientific pipeline and to assist
+            in achieving scientific reproducibility.</p>
 
             <h3>What does the name KERN mean?</h3>
             <p>KERN means 'core' in Dutch and Afrikaans.</p>
@@ -69,7 +75,7 @@ $ sudo apt-get install [package]</pre>
             <p>
                 We have a bleeding edge repository (kern-dev)  that will be updated with the latest packages. Every
                 half year we will freeze this repository and do a KERN release. This release will then only contain
-                critical bug fixes but not functional changes. This all to guarantee scientific reproducibility.
+                critical bug fixes but not functional changes.
             </p>
 
             <h3>What about docker images?</h3>
@@ -88,8 +94,8 @@ RUN docker-apt-install aoflagger</pre>
 
             <h3>How do I request an update or the inclusion of a package in KERN?</h3>
             <p>
-                Open up a bug report in our <a href="https://github.com/kernsuite/packaging">packaging issue tracker</a>.
-                Note that we don't add packages to an existing release. Also an existing KERN release is only updated
+                Open up a bug report in our <a href="https://github.com/kernsuite/packaging/issues">packaging issue tracker</a>.
+                Note that a package in an existing KERN release is only updated
                 when there is a dramatically serious problem.</p>
 
 
