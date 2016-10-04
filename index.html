@@ -53,7 +53,7 @@ $ sudo add-apt-repository -s ppa:kernsuite/kern-1
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
-            </p>
+
             <p>
                 You can install <b>KERN-dev</b> on <b>Ubuntu 16.04</b> with:
 
@@ -63,7 +63,7 @@ $ sudo add-apt-repository -s ppa:kernsuite/kern-dev
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
-            </p>
+
 
             <p>
                 You can use <b>KERN-0</b> on <b>Ubuntu 14.04</b>:
@@ -74,7 +74,7 @@ $ sudo add-apt-repository -s ppa:radio-astro/main
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
-            </p>
+
             <h3>What packages are available?</h3>
             <p>have a look at the <a href="packages.html">package list</a>.</p>
 
@@ -101,11 +101,21 @@ $ sudo apt-get install [package]</pre>
             <p>The Dockerfile below is all you need to setup a docker container for any of the packages in kern:</p>
             <pre>FROM kernsuite/base:dev
 RUN docker-apt-install aoflagger</pre>
-
+    
+            <p>The kernsuite docker image is a clean ubuntu system with the kern suite repository enabled. It
+                also contains an up-to-date pip so you can directly install Python libraries. The docker-apt-install
+                command is just a wrapper script that updates the apt cache before installing
+                the package followed by a removal of the apt cache. This is the best way to prevent adding of
+                clutter to your docker image and the image size to explode.
+    
             <p>Since it is close to impossible to make working debian packages for NRAO CASA we have created
                 separate docker images for this software package. It is available from the docker hub:</p>
+
             <pre>$ docker run -ti kernsuite/casa:4.6</pre>
 
+            <p>Note that the casa image is based on the base kernsuite image, so in this image you can also add
+                the other kernsuite packages.</p>
+            
             <h3>How do I request an update or the inclusion of a package in KERN?</h3>
             <p>
                 Open up a bug report in our <a href="https://github.com/kernsuite/packaging/issues">packaging issue tracker</a>.
@@ -123,7 +133,7 @@ RUN docker-apt-install aoflagger</pre>
                 latest Ubuntu LTS with a delay of 6 months up to a year. For KERN-0 this was Ubuntu 14.04, KERN-1 will
                 be based on Ubuntu 16.04.</p>
 
-            <h3>Will you support other distributions/version?</h3>
+            <h3>Will you support other distributions/versions?</h3>
             <p>
                 For now this is just too much work, so no. The recommended way to use KERN when you are not
                 running a supported platform is with <a href="http://www.docker.com">Docker</a> or in a
