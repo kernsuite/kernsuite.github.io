@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KERN - Radio Astronomy Software Suite</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <link href="kern.css" rel="stylesheet">
 </head>
@@ -18,7 +20,7 @@
 <div class="jumbotron">
     <div class="container">
 
-        <img src="kern_small.jpg">
+        <a href="index.html"><img src="kern_small.jpg"></a>
         <h1>PACKAGES OF KERN</h1>
     </div>
 </div>
@@ -27,6 +29,14 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-12">
+            <div class="alert alert-warning" role="alert">
+                To find out which versions in each release you should look at the launchpad page of the release.
+                Launchpad
+                pages for
+                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-1">KERN-1</a>,
+                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-2">KERN-2</a> and
+                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-dev">Kern-dev<a/>.
+            </div>
             <table class="table table-striped">
                 <tr>
                     <th>source package name</th>
@@ -35,225 +45,459 @@
                     <th>binary packages</th>
                 </tr>
                 <tr>
+                    <td>casa</td>
+                    <td><a href="https://casa.nrao.edu/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/casalite">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td>casalite</td>
+                </tr>
+                <tr>
                     <td>casacore</td>
-                    <td><a href="https://github.com/casacore/casacore"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casacore"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/casacore/casacore">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/casacore">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>casacore</td>
                 </tr>
                 <tr>
                     <td>casacore-data</td>
-                    <td><a href="https://github.com/casacore/casacore"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casacore-data"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/casacore/casacore">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/casacore-data">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>casacore-data</td>
                 </tr>
                 <tr>
                     <td>casarest</td>
-                    <td><a href="https://github.com/casacore/casarest"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casarest"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/casacore/casarest">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/casarest">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>casarest</td>
                 </tr>
                 <tr>
                     <td>casasynthesis</td>
-                    <td><a href="https://github.com/radio-astro/casasynthesis"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casasynthesis"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/radio-astro/casasynthesis">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/casasynthesis">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>casasynthesis</td>
                 </tr>
                 <tr>
                     <td>cassbeam</td>
-                    <td><a href="https://github.com/ratt-ru/cassbeam"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/cassbeam"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ratt-ru/cassbeam">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/cassbeam">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>cassbeam</td>
                 </tr>
                 <tr>
                     <td>dspsr</td>
-                    <td><a href="http://dspsr.sourceforge.net/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/dspsr"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://dspsr.sourceforge.net/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/dspsr">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>dspsr</td>
                 </tr>
                 <tr>
                     <td>greatcmakecookoff</td>
-                    <td><a href="https://github.com/UCL/GreatCMakeCookOff"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/greatcmakecookoff"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/UCL/GreatCMakeCookOff">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/greatcmakecookoff">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>greatcmakecookoff</td>
                 </tr>
                 <tr>
                     <td>kittens</td>
-                    <td><a href="https://github.com/ska-sa/kittens"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/kittens"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/kittens">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/kittens">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-kittens</td>
                 </tr>
                 <tr>
                     <td>lofar</td>
-                    <td><a href="svn.astron.nl/LOFAR/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/lofar"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="svn.astron.nl/LOFAR/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/lofar">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>lofar</td>
                 </tr>
                 <tr>
                     <td>makems</td>
-                    <td><a href="https://github.com/ska-sa/makems"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/makems"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/makems">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/makems">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>makems</td>
                 </tr>
                 <tr>
                     <td>meqtrees-cattery</td>
-                    <td><a href="https://github.com/ska-sa/meqtrees-cattery"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/meqtrees-cattery"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/meqtrees-cattery">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/meqtrees-cattery">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-meqtrees-cattery</td>
                 </tr>
                 <tr>
                     <td>meqtrees-timba</td>
-                    <td><a href="https://github.com/ska-sa/meqtrees-timba"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/meqtrees-timba"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/meqtrees-timba">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/meqtrees-timba">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-meqtrees-timba</td>
                 </tr>
                 <tr>
                     <td>mt-imager</td>
-                    <td><a href="https://github.com/ska-sa/mt-imager"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/mt-imager"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/mt-imager">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/mt-imager">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>mt-imager</td>
                 </tr>
                 <tr>
                     <td>multinest</td>
-                    <td><a href="https://ccpforge.cse.rl.ac.uk/gf/project/multinest/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/multinest"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://ccpforge.cse.rl.ac.uk/gf/project/multinest/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/multinest">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>multinest</td>
                 </tr>
                 <tr>
                     <td>obit</td>
-                    <td><a href="http://www.cv.nrao.edu/~bcotton/Obit.html"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/obit"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://www.cv.nrao.edu/~bcotton/Obit.html">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/obit">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>obit</td>
                 </tr>
                 <tr>
                     <td>oskar</td>
-                    <td><a href="http://www.oerc.ox.ac.uk/~ska/oskar2/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/oskar"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://www.oerc.ox.ac.uk/~ska/oskar2/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/oskar">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>oskar</td>
                 </tr>
                 <tr>
                     <td>owlcat</td>
-                    <td><a href="https://github.com/ska-sa/owlcat"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/owlcat"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/owlcat">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/owlcat">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-owlcat</td>
                 </tr>
                 <tr>
                     <td>parseltongue</td>
-                    <td><a href="http://www.jive.nl/jivewiki/doku.php?id=parseltongue:parseltongue"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/parseltongue"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://www.jive.nl/jivewiki/doku.php?id=parseltongue:parseltongue">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/parseltongue">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>parseltongue</td>
                 </tr>
                 <tr>
                     <td>presto</td>
-                    <td><a href="https://github.com/scottransom/presto/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/presto"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/scottransom/presto/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/presto">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>presto</td>
                 </tr>
                 <tr>
                     <td>psrcat</td>
-                    <td><a href="http://www.atnf.csiro.au/people/pulsar/psrcat/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/psrcat"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://www.atnf.csiro.au/people/pulsar/psrcat/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/psrcat">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>psrcat</td>
                 </tr>
                 <tr>
                     <td>psrchive</td>
-                    <td><a href="http://psrchive.sourceforge.net/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/psrchive"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://psrchive.sourceforge.net/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/psrchive">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>psrchive</td>
                 </tr>
                 <tr>
                     <td>purify</td>
-                    <td><a href="https://github.com/basp-group/purify"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/purify"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/basp-group/purify">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/purify">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>purify</td>
                 </tr>
                 <tr>
                     <td>purr</td>
-                    <td><a href="https://github.com/ska-sa/purr"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/purr"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/purr">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/purr">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>purr</td>
                 </tr>
                 <tr>
                     <td>pymoresane</td>
-                    <td><a href="https://github.com/ratt-ru/PyMORESANE"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/pymoresane"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ratt-ru/PyMORESANE">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/pymoresane">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>pymoresane</td>
                 </tr>
                 <tr>
                     <td>python-casacore</td>
-                    <td><a href="https://github.com/casacore/python-casacore"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/python-casacore"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/casacore/python-casacore">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/python-casacore">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-casacore</td>
                 </tr>
                 <tr>
                     <td>pyxis</td>
-                    <td><a href="https://github.com/ska-sa/pyxis"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/pyxis"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/pyxis">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/pyxis">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>pyxis</td>
                 </tr>
                 <tr>
                     <td>rpfits</td>
-                    <td><a href="http://www.atnf.csiro.au/computing/software/rpfits.html"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/rpfits"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://www.atnf.csiro.au/computing/software/rpfits.html">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/rpfits">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>rpfits</td>
                 </tr>
                 <tr>
                     <td>sagecal</td>
-                    <td><a href="https://sourceforge.net/projects/sagecal/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sagecal"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://sourceforge.net/projects/sagecal/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/sagecal">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>sagecal</td>
                 </tr>
                 <tr>
                     <td>sigproc</td>
-                    <td><a href="http://sigproc.sourceforge.net/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sigproc"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://sigproc.sourceforge.net/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/sigproc">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>sigproc</td>
                 </tr>
                 <tr>
                     <td>sopt</td>
-                    <td><a href="https://github.com/astro-informatics/sopt"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sopt"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/astro-informatics/sopt">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/sopt">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>sopt</td>
                 </tr>
                 <tr>
                     <td>sourcery</td>
-                    <td><a href="https://github.com/radio-astro/sourcery"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sourcery"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/radio-astro/sourcery">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/sourcery">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-sourcery</td>
                 </tr>
                 <tr>
                     <td>tempo</td>
-                    <td><a href="https://sourceforge.net/projects/tempo"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tempo"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://sourceforge.net/projects/tempo">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/tempo">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>tempo</td>
                 </tr>
                 <tr>
                     <td>tempo2</td>
-                    <td><a href="https://bitbucket.org/psrsoft/tempo2/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tempo2"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://bitbucket.org/psrsoft/tempo2/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/tempo2">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>tempo2</td>
                 </tr>
                 <tr>
                     <td>tigger</td>
-                    <td><a href="https://github.com/ska-sa/tigger"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tigger"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/ska-sa/tigger">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/tigger">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-tigger</td>
                 </tr>
                 <tr>
                     <td>wsclean</td>
-                    <td><a href="http://sourceforge.net/projects/wsclean/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/wsclean"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="http://sourceforge.net/projects/wsclean/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/wsclean">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>wsclean</td>
                 </tr>
                 <tr>
                     <td>chgcentre</td>
-                    <td><a href="https://sourceforge.net/p/wsclean/wiki/chgcentre/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/chgcentre"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://sourceforge.net/p/wsclean/wiki/chgcentre/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/chgcentre">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>chgcentre</td>
                 </tr>
                 <tr>
                     <td>tkp</td>
-                    <td><a href="https://github.com/transientskp/tkp/"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tkp"><button type="button" class="btn primary" aria-label="website"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button></a></td>
+                    <td><a href="https://github.com/transientskp/tkp/">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                    </a></td>
+                    <td><a href="https://github.com/kernsuite-debian/tkp">
+                        <button type="button" class="btn primary" aria-label="website"><span
+                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                    </a></td>
                     <td>python-tkp</td>
                 </tr>
             </table>

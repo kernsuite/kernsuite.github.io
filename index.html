@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KERN - Radio Astronomy Software Suite</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <link href="kern.css" rel="stylesheet">
+
+    <style>
+
+    </style>
 </head>
 <body>
 
@@ -21,43 +27,64 @@
         <img src="kern_small.jpg">
         <h1>KERN</h1>
         <p1>The Radio Astronomy Software Suite</p1>
+
     </div>
 </div>
 
 <div class="container">
-    <!-- Example row of columns -->
+
+
     <div class="row">
         <div class="col-md-8  col-md-offset-2">
-            <h3>What is KERN?</h3>
+            <button class="accordion">What is KERN?</button>
+            <div class="panel">
+                <p>
+                    KERN is a bi-annually released set of radio astronomical software packages. It should contain
+                    most of the tools that a radio astronomer needs to work with radio telescope data.
+                </p>
+            </div>
 
-            <p>
-                KERN is a bi-annually released set of radio astronomical software packages. It should contain
-                all the tools that a radio astronomer needs to work with radio telescope data.
-            </p>
-            
-            <h3>News?</h3>
-            <p>
-                KERN-1 has been released on <b>August 11 2016</b>.
-            </p>
-
-            <h3>How do I use it?</h3>
-            If you care about stability and reproducability we recommend you use the latest release of KERN (KERN-1) on Ubuntu 16.04.
-            If you want the latest and greatest you should use KERN-dev. If you are still stuck on Ubuntu 14.04 we recommend you use KERN-0.
-            <p></p>
-            <p>
-                To install <b>KERN-1</b> on <b>Ubuntu 16.04</b> run:
-
-            <pre>
+            <button class="accordion">Quickly getting started</button>
+            <div class="panel">
+                To use <b>KERN-1</b> on Ubuntu <b>16.04</b>:
+                <pre class="alert alert-warning" role="alert">
 $ sudo apt-get install software-properties-common
 $ sudo add-apt-repository -s ppa:kernsuite/kern-1
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
 
-            <p>
-                You can install <b>KERN-dev</b> on <b>Ubuntu 16.04</b> with:
+            </div>
+            <button class="accordion">News?</button>
+            <div class="panel">
+                <p>
+                    KERN-1 has been released on <b>August 11 2016</b>.
+                </p>
 
-            <pre>
+            </div>
+            <button class="accordion">How do I use it?</button>
+            <div class="panel">
+                If you care about stability and reproducibility we recommend you use the latest release of KERN
+                (KERN-1)
+                on
+                Ubuntu 16.04. If you want the latest and greatest you should use KERN-dev. If you are still stuck on
+                Ubuntu
+                14.04 we recommend you use KERN-0.
+                <p></p>
+                <p>
+                    To install <b>KERN-1</b> on <b>Ubuntu 16.04</b> run:
+
+                <pre class="alert alert-warning" role="alert">
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s ppa:kernsuite/kern-1
+$ sudo apt-add-repository multiverse
+$ sudo apt-get update
+$ sudo apt-get install [package]</pre>
+
+                <p>
+                    You can install <b>KERN-dev</b> on <b>Ubuntu 16.04</b> with:
+
+                <pre class="alert alert-warning" role="alert">
 $ sudo apt-get install software-properties-common
 $ sudo add-apt-repository -s ppa:kernsuite/kern-dev
 $ sudo apt-add-repository multiverse
@@ -65,133 +92,194 @@ $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
 
 
-            <p>
-                You can use <b>KERN-0</b> on <b>Ubuntu 14.04</b>:
+                <p>
+                    You can use <b>KERN-0</b> on <b>Ubuntu 14.04</b>:
 
-            <pre>
+                <pre class="alert alert-warning" role="alert">
 $ sudo apt-get install software-properties-common
 $ sudo add-apt-repository -s ppa:radio-astro/main
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
+            </div>
 
-            <h3>What packages are available?</h3>
-            <p>have a look at the <a href="packages.html">package list</a>.</p>
+            <button class="accordion">What packages are available?</button>
+            <div class="panel">
+                To find out what packages and which versions are in each release you should look at the launchpad page
+                of that specific release. Launchpad pages for
+                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-1">KERN-1</a>,
+                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-2">KERN-2</a> and
+                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-dev">Kern-dev<a/>.
+            </div>
 
-            <h3>Why should I use KERN?</h3>
-            <p>to save time and frustration setting up your scientific pipeline and to assist
-                in achieving scientific reproducibility.</p>
-            
-            <h3>How do I request an update or the inclusion of a package in KERN?</h3>
-            <p>
-                Open up a bug report in our <a href="https://github.com/kernsuite/packaging/issues">packaging issue tracker</a>.
-                Note that a package in an existing KERN release is only updated
-                when there is a dramatically serious problem.</p>
+            <button class="accordion">Why should I use KERN?</button>
+            <div class="panel">
+                <p>to save time and frustration setting up your scientific pipeline and to assist
+                    in achieving scientific reproducibility.</p>
+            </div>
+            <button class="accordion">How do I request an update or the inclusion of a package in KERN?</button>
+            <div class="panel">
+                <p>
+                    Open up a bug report in our <a href="https://github.com/kernsuite/packaging/issues">packaging
+                    issue
+                    tracker</a>.
+                    Note that a package in an existing KERN release is only updated
+                    when there is a dramatically serious problem.</p>
 
+            </div>
+            <button class="accordion">What does the name KERN mean?</button>
+            <div class="panel">
+                <p>KERN means 'core' in Dutch and Afrikaans.</p>
+            </div>
+            <button class="accordion">How does the release schema looks like?</button>
+            <div class="panel">
+                <p>
+                    We have a bleeding edge repository (kern-dev) that will be updated with the latest packages.
+                    Every
+                    half year we will freeze this repository and do a KERN release. This release will then only
+                    contain
+                    critical bug fixes but not functional changes.
+                </p>
+            </div>
+            <button class="accordion">What about docker images?</button>
+            <div class="panel">
+                <p>
+                    we have prepared easy to use base docker image which you can use to create custom docker images
+                    containers all the KERN packages combined with your own scripts.
+                </p>
 
-            <h3>What does the name KERN mean?</h3>
-            <p>KERN means 'core' in Dutch and Afrikaans.</p>
-
-            <h3>How does the release schema looks like?</h3>
-            <p>
-                We have a bleeding edge repository (kern-dev)  that will be updated with the latest packages. Every
-                half year we will freeze this repository and do a KERN release. This release will then only contain
-                critical bug fixes but not functional changes.
-            </p>
-
-            <h3>What about docker images?</h3>
-            <p>
-                we have prepared easy to use base docker image which you can use to create custom docker images
-                containers all the KERN packages combined with your own scripts.
-            </p>
-
-            <p>The Dockerfile below is all you need to setup a docker container for any of the packages in kern:</p>
-            <pre>FROM kernsuite/base:dev
+                <p>The Dockerfile below is all you need to setup a docker container for any of the packages in
+                    kern:</p>
+                <pre>FROM kernsuite/base:dev
 RUN docker-apt-install aoflagger</pre>
-    
-            <p>The kernsuite docker image is a clean ubuntu system with the kern suite repository enabled. It
-                also contains an up-to-date pip so you can directly install Python libraries. The docker-apt-install
-                command is just a wrapper script that updates the apt cache before installing
-                the package followed by a removal of the apt cache. This is the best way to prevent adding of
-                clutter to your docker image and the image size to explode.
-    
-            <p>Since it is close to impossible to make working debian packages for NRAO CASA we have created
-                separate docker images for this software package. It is available from the docker hub:</p>
 
-            <pre>$ docker run -ti kernsuite/casa:4.6</pre>
+                <p>The kernsuite docker image is a clean ubuntu system with the kern suite repository enabled. It
+                    also contains an up-to-date pip so you can directly install Python libraries. The
+                    docker-apt-install
+                    command is just a wrapper script that updates the apt cache before installing
+                    the package followed by a removal of the apt cache. This is the best way to prevent adding of
+                    clutter to your docker image and the image size to explode.
 
-            <p>Note that the casa image is based on the base kernsuite image, so in this image you can also add
-                the other kernsuite packages.</p>
-            
-            <h3>What about Singularity?</h3>
-            Of course we do singularity also. See <a href="https://github.com/kernsuite/singularity/">this github repository</a>
-            for build files for building your singularity container.
-            
+                <p>You can also have a look at the <a href="https://github.com/kernsuite-docker/base">Dockerfile</a>.
+                </p>
+            </div>
+            <button class="accordion">What about Singularity?</button>
+            <div class="panel">
+                Of course we do singularity also. See <a href="https://github.com/kernsuite/singularity/">this
+                github
+                repository</a>
+                for build files for building your singularity container.
 
+            </div>
 
-            <h3>Why did the first KERN release get version number 0?</h3>
-            <p>KERN has a presuccessor named the radio-astro launchpad PPA. This PPA
-                is not updated anymore and renamed to KERN-0.</p>
+            <button class="accordion">Why did the first KERN release get version number 0?</button>
+            <div class="panel">
+                <p>KERN has a presuccessor named the radio-astro launchpad PPA. This PPA
+                    is not updated anymore and renamed to KERN-0.</p>
+            </div>
+            <button class="accordion">Why Ubuntu 16.04?</button>
+            <div class="panel">
+                <p>
+                    Ubuntu is one of the mostly used Linux distributions in (radio) astronomy, or at least in
+                    Europe and
+                    Afrika.
+                    For now we base KERN on the latest Ubuntu LTS with a delay of 6 months up to a year. For
+                    KERN-0 this
+                    was
+                    Ubuntu 14.04, KERN-1 will be based on Ubuntu 16.04.</p>
+            </div>
+            <button class="accordion">Will you support other distributions/versions?</button>
+            <div class="panel">
+                <p>
+                    For now this is just too much work, so no. The recommended way to use KERN when you are not
+                    running a supported platform is with <a href="http://www.docker.com">Docker</a> or in a
+                    <a href="https://www.virtualbox.org/">virtualmachine</a>. We made
+                    <a href="https://www.vagrantup.com/">Vagrant</a> files for you <a
+                        href="https://github.com/kernsuite/packaging/tree/master/vagrant">already</a>.
+                </p>
+            </div>
+            <button class="accordion">How do I stay up to date?</button>
+            <div class="panel">
+                <p>
+                    Follow us on <a href="https://twitter.com/kernsuite">twitter</a>.
+                </p>
+            </div>
 
-            <h3>Why Ubuntu 16.04?</h3>
-            <p>
-                Ubuntu is one of the mostly used Linux distributions in (radio) astronomy, or at least in Europe and Afrika.
-                For now we base KERN on the latest Ubuntu LTS with a delay of 6 months up to a year. For KERN-0 this was
-                Ubuntu 14.04, KERN-1 will be based on Ubuntu 16.04.</p>
+            <button class="accordion">Can I mix KERN releases?</button>
+            <div class="panel">
+                <p>Not recommended and unsupported, but we are not stopping you.</p>
 
-            <h3>Will you support other distributions/versions?</h3>
-            <p>
-                For now this is just too much work, so no. The recommended way to use KERN when you are not
-                running a supported platform is with <a href="http://www.docker.com">Docker</a> or in a
-                <a href="https://www.virtualbox.org/">virtualmachine</a>. We made
-                <a href="https://www.vagrantup.com/">Vagrant</a> files for you <a href="https://github.com/kernsuite/packaging/tree/master/vagrant">already</a>.
-            </p>
+            </div>
+            <button class="accordion">When is the next KERN version released?</button>
+            <div class="panel">
 
-            <h3>How do I stay up to date?</h3>
-            <p>
-                Follow us on <a href="https://twitter.com/kernsuite">twitter</a>.
-            </p>
-
-
-            <h3>Can I mix KERN releases?</h3>
-            <p>Not recommended and unsupported, but we are not stopping you.</p>
-
-
-            <h3>When is the next KERN version released?</h3>
-
-            <p>There is no fixed release date, but we intent to release a KERN release every 6 months.</p>
-
-            <h3>I use KERN. How do I cite you?</h3>
-            <p>We are working on a paper, but it is not finished yet.</p>
-
-            <h3>Who made that logo?</h3>
-            <p>We found it on <a href="https://www.flickr.com/photos/argonne/14259873660">flickr</a></p>
-
-            <h3>Who made KERN?</h3>
-            <a href="http://pythonic.nl">Gijs Molenaar</a>, together with all people reporting problems and
-            submitting patches (thanks!).
-
-            <h3>Important links</h3>
-            <a href="https://launchpad.net/~kernsuite">The Lauchpad PPA account</a><br>
-            <a href="https://github.com/kernsuite">KERN github group</a><br>
-            <a href="https://twitter.com/kernsuite">KERN on twitter</a><br>
-            <a href="https://hub.docker.com/u/kernsuite/">KERN on Docker hub</a><br>
-            <a href="https://github.com/kernsuite-debian">KERN debian source repositories</a><br>
-            <a href="https://github.com/kernsuite-docker">KERN docker file repositories</a><br>
+                <p>There is no fixed release date, but we intent to release a KERN release every 6 months.</p>
+            </div>
+            <button class="accordion">I use KERN. How do I cite you?</button>
+            <div class="panel">
+                <p>We are working on a paper, but it is not finished yet.</p>
+            </div>
+            <button class="accordion">Who made that logo?</button>
+            <div class="panel">
+                <p>We found it on <a href="https://www.flickr.com/photos/argonne/14259873660">flickr</a></p>
+            </div>
+            <button class="accordion">Who made KERN?</button>
+            <div class="panel">
+                <a href="http://pythonic.nl">Gijs Molenaar</a>, together with all people reporting problems and
+                submitting patches (thanks!).
+            </div>
+            <button class="accordion">Important links</button>
+            <div class="panel">
+                <a href="https://launchpad.net/~kernsuite">The Lauchpad PPA account</a><br>
+                <a href="https://github.com/kernsuite">KERN github group</a><br>
+                <a href="https://twitter.com/kernsuite">KERN on twitter</a><br>
+                <a href="https://hub.docker.com/u/kernsuite/">KERN on Docker hub</a><br>
+                <a href="https://github.com/kernsuite-debian">KERN debian source repositories</a><br>
+                <a href="https://github.com/kernsuite-docker">KERN docker file repositories</a><br>
+            </div>
         </div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                crossorigin="anonymous"></script>
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-80973356-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+            ga('create', 'UA-80973356-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function () {
+                    /* Toggle between adding and removing the "active" class,
+                     to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                }
+            }
+        </script>
 </body>
 </html>
