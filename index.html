@@ -192,10 +192,20 @@ RUN docker-apt-install aoflagger</pre>
             <div class="panel">
                 <p>
                     For now this is just too much work, so no. The recommended way to use KERN when you are not
-                    running a supported platform is with <a href="http://www.docker.com">Docker</a> or in a
+                    running a supported platform is with <a href="http://www.docker.com">Docker</a>,
+                    <a href="http://singularity.lbl.gov/">Singularity</a> or in a
                     <a href="https://www.virtualbox.org/">virtualmachine</a>. We made
                     <a href="https://www.vagrantup.com/">Vagrant</a> files for you <a
                         href="https://github.com/kernsuite/packaging/tree/master/vagrant">already</a>.
+                </p>
+            </div>
+            <button class="accordion">What about windows and Mac OS X?</button>
+            <div class="panel">
+                <p>
+                    Surprisingly KERN works quite well on Windows 10. You need
+                    <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu On
+                        Windows</a>. Note that you also need a Ubuntu Xenial (16.04) installation, which is currently
+                    only included with the developer previews. On OSX we recommend to use Docker.
                 </p>
             </div>
             <button class="accordion">How do I stay up to date?</button>
@@ -210,6 +220,21 @@ RUN docker-apt-install aoflagger</pre>
                 <p>Not recommended and unsupported, but we are not stopping you.</p>
 
             </div>
+
+            <button class="accordion">I want to debug my application but there are no debug symbols?</button>
+            <div class="panel">
+                <p>Don't panic! They are actually existing but in a different repository.
+                    You can enable the debug repository by editing <b>/etc/apt/sources.list.d/kernsuite-ubuntu-kern-2-xenial.list</b>
+                        and copying the line starting with <b>deb</b> and appending <b>/debug</b> to it.
+                It should look something like this:
+                <pre class="alert alert-warning" role="alert">
+deb http://ppa.launchpad.net/kernsuite/kern-1/ubuntu xenial main
+deb http://ppa.launchpad.net/kernsuite/kern-1/ubuntu xenial main/debug
+                </pre>
+                </p>
+
+            </div>
+
             <button class="accordion">When is the next KERN version released?</button>
             <div class="panel">
 
