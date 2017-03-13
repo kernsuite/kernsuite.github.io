@@ -46,10 +46,10 @@
 
             <button class="accordion">Quickly getting started</button>
             <div class="panel">
-                To use <b>KERN-1</b> on Ubuntu <b>16.04</b>:
+                To use <b>KERN-2</b> on Ubuntu <b>16.04</b>:
                 <pre class="alert alert-warning" role="alert">
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-1
+$ sudo add-apt-repository -s ppa:kernsuite/kern-2
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
@@ -60,17 +60,49 @@ $ sudo apt-get install [package]</pre>
                 <p>
                     KERN-1 has been released on <b>August 11 2016</b>.
                 </p>
+                <hr>
+                <p>
+                    KERN-2 has been released on <b>March 13 2017</b>.
+                </p>
+                <hr>
+                <h5>KERN-2 changes since KERN-1</h5>
+                <p>
+                <ul>
+                    <li> Update to casacore 2.2.0</li>
+                    <li> added stripped down version of NRAO CASA called casalite. Note this CASA still doesn't
+                        integrate
+                        with the system python.
+                    </li>
+                    <li> All packages updated to the latest versions</li>
+                    <li> Split of LOFAR package in smaller packages</li>
+                    <li> wsclean now contains LOFAR beam model</li>
+                    <li> Added various new packages</li>
+                </ul>
+
+                </p>
+
 
             </div>
             <button class="accordion">How do I use it?</button>
             <div class="panel">
-                If you care about stability and reproducibility we recommend you use the latest release of KERN
-                (KERN-1)
-                on
-                Ubuntu 16.04. If you want the latest and greatest you should use KERN-dev. If you are still stuck on
-                Ubuntu
-                14.04 we recommend you use KERN-0.
-                <p></p>
+                <p>
+                    If you care about stability and reproducibility we recommend you use the latest release of KERN
+                    (KERN-2) on Ubuntu 16.04. If you want the latest and greatest you should use KERN-dev. If you are
+                    still
+                    stuck on Ubuntu 14.04 we recommend you use KERN-0, but those packages are quite outdated by now..
+                </p>
+
+                <p>
+                    To install <b>KERN-2</b> on <b>Ubuntu 16.04</b> run:
+
+                <pre class="alert alert-warning" role="alert">
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s ppa:kernsuite/kern-2
+$ sudo apt-add-repository multiverse
+$ sudo apt-get update
+$ sudo apt-get install [package]</pre>
+                </p>
+
                 <p>
                     To install <b>KERN-1</b> on <b>Ubuntu 16.04</b> run:
 
@@ -80,7 +112,7 @@ $ sudo add-apt-repository -s ppa:kernsuite/kern-1
 $ sudo apt-add-repository multiverse
 $ sudo apt-get update
 $ sudo apt-get install [package]</pre>
-
+                </p>
                 <p>
                     You can install <b>KERN-dev</b> on <b>Ubuntu 16.04</b> with:
 
@@ -181,12 +213,9 @@ RUN docker-apt-install aoflagger</pre>
             <div class="panel">
                 <p>
                     Ubuntu is one of the mostly used Linux distributions in (radio) astronomy, or at least in
-                    Europe and
-                    Afrika.
+                    Europe and Afrika.
                     For now we base KERN on the latest Ubuntu LTS with a delay of 6 months up to a year. For
-                    KERN-0 this
-                    was
-                    Ubuntu 14.04, KERN-1 will be based on Ubuntu 16.04.</p>
+                    KERN-0 this was Ubuntu 14.04, following releases are based on Ubuntu 16.04.</p>
             </div>
             <button class="accordion">Will you support other distributions/versions?</button>
             <div class="panel">
@@ -225,11 +254,11 @@ RUN docker-apt-install aoflagger</pre>
             <div class="panel">
                 <p>Don't panic! They are actually existing but in a different repository.
                     You can enable the debug repository by editing <b>/etc/apt/sources.list.d/kernsuite-ubuntu-kern-2-xenial.list</b>
-                        and copying the line starting with <b>deb</b> and appending <b>/debug</b> to it.
-                It should look something like this:
+                    and copying the line starting with <b>deb</b> and appending <b>/debug</b> to it.
+                    It should look something like this:
                 <pre class="alert alert-warning" role="alert">
-deb http://ppa.launchpad.net/kernsuite/kern-1/ubuntu xenial main
-deb http://ppa.launchpad.net/kernsuite/kern-1/ubuntu xenial main/debug
+deb http://ppa.launchpad.net/kernsuite/kern-2/ubuntu xenial main
+deb http://ppa.launchpad.net/kernsuite/kern-2/ubuntu xenial main/debug
                 </pre>
                 </p>
 
