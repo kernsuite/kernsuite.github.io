@@ -21,6 +21,11 @@ h2 {
     font-family: 'Quicksand';
 }
 
+h3 {
+    font-family: 'Quicksand';
+}
+
+
 hr {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -28,7 +33,7 @@ hr {
 
 
 .nav-item {
-    margin-right: 70px;
+    margin-left: 70px;
 }
 
 .nav-icon {
