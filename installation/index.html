@@ -1,0 +1,84 @@
+---
+---
+
+{%  include header.html %}
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col col-lg-8 bg-light border border-white">
+
+            <h1 class="page-title">Installation guide</h1>
+            <hr>
+
+            <h2 class="page-title">KERN-3 - Ubuntu 18.04</h2>
+            <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
+                The current
+                release of KERN is KERN-3 and is based on Ubuntu 16.04 (Xenial). To enable the KERN-3 repository on a
+                Ubuntu 18.04
+                system run:
+            </p>
+
+            <figure class="code">
+<pre><code>
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s ppa:kernsuite/kern-3
+$ sudo apt-add-repository multiverse restricted
+$ sudo apt-get update
+</code></pre>
+            </figure>
+
+
+            <p>Now you are ready to install some packages, for example meqtrees:</p>
+            <figure class="code">
+<pre><code>
+$ sudo apt-get install meqtrees
+</code></pre>
+            </figure>
+
+            <hr>
+
+            <h2 class="page-title">Docker and singularity</h2>
+
+            You can use the following Dockerfile as a base for <a href="https://www.docker.com/">Docker</a>
+            and <a href="http://singularity.lbl.gov/">Singularity</a> images:
+            <figure class="code">
+<pre><code>
+FROM kernsuite/base:4
+RUN docker-apt-install meqtrees
+</code></pre>
+            </figure>
+
+            We have added a docker-apt-install command to the image which is a wrapper around apt-get to first
+            fetch the package list of the Ubuntu archive, install the requested package and finally clean up the
+            temporary cache. This keeps the Docker image small.
+
+            <hr>
+
+            <h2 class="page-title">KERN-4 - Ubuntu 18.04</h2>
+
+            We are currenty preparing for KERN-4, which happens in the KERN-dev repository:
+
+            <figure class="code"><pre><code>
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s ppa:kernsuite/kern-dev
+$ sudo apt-add-repository multiverse restricted
+$ sudo apt-get update
+</code></pre></figure>
+
+            <p>Now you are ready to install some packages, for example presto:</p>
+            <figure class="code">
+<pre><code>
+$ sudo apt-get install presto
+</code></pre>
+            </figure>
+
+
+            <h2 class="page-title">Older releases</h2>
+
+            The old releases are KERN-0 for Ubuntu 14.04, KERN-1 and KERN-2 for Ubuntu 16.04. These releases have
+            reached end of live and are not supported anymore. You can still use them though, also inside Docker
+            containers.
+
+        </div>
+    </div>
+</div>

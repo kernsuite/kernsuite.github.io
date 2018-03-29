@@ -1,0 +1,67 @@
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+    font-family: 'Quicksand';
+}
+
+h2 {
+    font-family: 'Quicksand';
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.nav-item {
+    margin-right: 70px;
+}
+
+.nav-icon {
+    color: #bbb;
+}
+
+.nav-icon:hover {
+    color: #fff;
+}
+
+
+.jumbotron {
+    text-align: center;
+    color: #ddd;
+    background-image: url('/images/AR1_cutout.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.page-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.code {
+    background-color: #ccc;
+    margin: 20px;
+    padding: 20px;
+}
+
+body {
+    margin-bottom: 200px;
+}

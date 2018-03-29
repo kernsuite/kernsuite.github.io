@@ -1,0 +1,223 @@
+---
+---
+
+{%  include header.html %}
+
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col col-lg-8 bg-light border border-white">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+
+            <hr>
+
+            <h3>What is KERN?</h3>
+
+            <p>
+                KERN is a bi-annually released set of radio astronomical software packages. It should contain
+                most of the tools that a radio astronomer needs to work
+                with radio telescope data. KERN is based on the latest
+                Ubuntu LTS.
+            </p>
+
+            <hr>
+
+            <h3>I use KERN. How do I cite you?</h3>
+
+            <p>We have submitted <a href="https://arxiv.org/abs/1710.09145" target="_blank">a paper</a>
+                to astronomy and Computing which is pending publication.</p>
+
+            <hr>
+
+            <h3>What packages are available?</h3>
+
+            To find out what packages and which versions are in each release you should look at the launchpad page
+            of that specific release. Launchpad pages for
+            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-1">KERN-1</a>,
+            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-2">KERN-2</a>,
+            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-3">KERN-3</a> and
+            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-dev">Kern-dev</a>.
+
+            Sometimes the binary package name doesn't match the source package name. Try a "apt-cache search package",
+            and see if it listed under a (slightly) different name.
+
+            <hr>
+
+            <h3>How do I report a problem, or ask for a new package to be added?</h3>
+
+            <p>
+                Open up a bug report in our <a href="https://github.com/kernsuite/packaging/issues">packaging
+                issue tracker</a>. Please make sure that you are running the latest versions of the packages
+                you are using (run <b>apt-get update && apt-get upgrade</b>).
+                Note that a package in an existing KERN release is only updated
+                when there is a dramatically serious problem.</p>
+
+            <hr>
+
+            <h3>I want to help! What should I do?</h3>
+            <p>If a package is not working properly, open up a bug report in our
+                <a href="https://github.com/kernsuite/packaging/issues">packaging issue tracker</a>. If you want to
+                create or modify a package yourself, you can follow our
+                <a href="https://github.com/kernsuite/packaging/wiki/How-to-do-KERN-packaging">How to do KERN packaging guide.</a>
+            </p>
+
+            <hr>
+
+            <h3>What does the name KERN mean?</h3>
+
+            <p>KERN means 'core' in Dutch and Afrikaans.</p>
+
+            <hr>
+
+            <h3>How does the release schema looks like?</h3>
+
+            <p>
+                We have a bleeding edge development repository (KERN-dev) that will be updated with the latest packages.
+                Ideally every half year we will freeze this repository and do a KERN release. This release will then only
+                contain critical bug fixes but not functional changes.
+            </p>
+
+            <hr>
+
+            <h3>What about docker images?</h3>
+
+            <p>
+                we have prepared easy-to-use base docker image which you can use to create custom docker images
+                containers all the KERN packages combined with your own scripts.
+            </p>
+
+            <p>The Dockerfile below is all you need to setup a docker container for any of the packages in
+                kern:</p>
+            <pre>FROM kernsuite/base:dev
+RUN docker-apt-install aoflagger</pre>
+
+            <p>The kernsuite docker image is a clean ubuntu system with the kern suite repository enabled. It
+                also contains an up-to-date pip so you can directly install Python libraries. The
+                docker-apt-install
+                command is just a wrapper script that updates the apt cache before installing
+                the package followed by a removal of the apt cache. This is the best way to prevent adding of
+                clutter to your docker image and the image size to explode.
+
+            <p>You can also have a look at the <a href="https://github.com/kernsuite-docker/base">Dockerfile</a>.
+            </p>
+
+            <hr>
+
+            <h3>What about Singularity?</h3>
+
+            Of course we do singularity. See <a href="https://github.com/kernsuite/singularity/">this
+            github repository</a> for build files for building your singularity container.
+
+            <hr>
+
+            <h3>Why did the first KERN release get version number 0?</h3>
+
+            <p>KERN has a presuccessor named the radio-astro launchpad PPA. This PPA
+                is not updated anymore and renamed to KERN-0.</p>
+
+            <hr>
+
+            <h3>Why Ubuntu?</h3>
+
+            <p>
+                Ubuntu is one of the mostly used Linux distributions in (radio) astronomy, or at least in
+                Europe and Africa. For now we base KERN on the latest Ubuntu LTS with a delay of 6 months up to a year.
+                For
+                KERN-0 this was Ubuntu 14.04, following releases are based on Ubuntu 16.04. KERN-4 is based on 18.04</p>
+
+            <hr>
+
+            <h3>Will you support other distributions/versions?</h3>
+
+            <p>
+                For now this is just too much work, so no. The recommended way to use KERN when you are not
+                running a supported platform is with <a href="http://www.docker.com">Docker</a>,
+                <a href="http://singularity.lbl.gov/">Singularity</a> or in a
+                <a href="https://www.virtualbox.org/">virtualmachine</a>. We made
+                <a href="https://www.vagrantup.com/">Vagrant</a> files for you <a
+                    href="https://github.com/kernsuite/packaging/tree/master/vagrant">already</a>.
+            </p>
+
+            <hr>
+
+            <h3>What about windows and Mac OS X?</h3>
+
+            <p>
+                Surprisingly KERN works quite well on Windows 10. You need
+                <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu On
+                    Windows</a>. Note that you also need a Ubuntu Xenial (16.04) installation, which is currently
+                only included with the developer previews. On OSX we recommend to use Docker.
+            </p>
+
+            <hr>
+
+            <h3>How do I stay up to date?</h3>
+
+            <p>
+                Follow us on <a href="https://twitter.com/kernsuite">twitter</a>.
+            </p>
+
+            <hr>
+
+            <h3>Can I mix KERN releases?</h3>
+
+            <p>Not recommended and unsupported, but we are not stopping you.</p>
+
+            <hr>
+
+            <h3>I want to debug my application but there are no debug symbols?</h3>
+
+            <p>Don't panic! They are actually existing but in a different repository.
+                You can enable the debug repository by editing
+                <b>/etc/apt/sources.list.d/kernsuite-ubuntu-kern-3-xenial.list</b>
+                and copying the line starting with <b>deb</b> and appending <b>/debug</b> to it.
+                It should look something like this:</p>
+
+            <figure class="code"><pre><code>
+deb http://ppa.launchpad.net/kernsuite/kern-3/ubuntu xenial main
+deb http://ppa.launchpad.net/kernsuite/kern-3/ubuntu xenial main/debug
+            </code></pre></figure>
+
+
+            <hr>
+            <h3>When is the next KERN version released?</h3>
+
+            <p>There is no fixed release date, but we intent to release a KERN release every 6 months.</p>
+
+            <hr>
+
+            <h3>What key has been used to sign the packages?</h3>
+
+            <figure class="code"><pre><code>
+pub   2048R/2D4D24EE 2017-10-17 [expires: 2022-10-16]
+      Key fingerprint = 8EA8 7A46 9764 17CA B0FB  4E2A BF82 6FAF 2D4D 24EE
+uid                  KERN packaging <packaging@kernsuite.info>
+            </code></pre></figure>
+
+            <hr>
+
+            <h3>Who made that earth core logo?</h3>
+            <p>We found it on <a href="https://www.flickr.com/photos/argonne/14259873660">flickr</a></p>
+
+            <hr>
+            <h3>Who made KERN?</h3>
+
+            <a href="http://pythonic.nl">Gijs Molenaar</a>, together with all people reporting problems and
+            submitting patches (thanks!).
+
+            <hr>
+
+            <h3>Important links</h3>
+
+            <a href="https://launchpad.net/~kernsuite">The Lauchpad PPA account</a><br>
+            <a href="https://github.com/kernsuite">KERN github group</a><br>
+            <a href="https://twitter.com/kernsuite">KERN on twitter</a><br>
+            <a href="https://hub.docker.com/u/kernsuite/">KERN on Docker hub</a><br>
+            <a href="https://github.com/kernsuite-debian">KERN debian source repositories</a><br>
+            <a href="https://github.com/kernsuite-docker">KERN docker file repositories</a><br>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
