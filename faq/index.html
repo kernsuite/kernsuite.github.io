@@ -36,7 +36,8 @@
             of that specific release. Launchpad pages for
             <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-1">KERN-1</a>,
             <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-2">KERN-2</a>,
-            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-3">KERN-3</a> and
+            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-3">KERN-3</a>,
+            <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-3">KERN-4</a> and
             <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-dev">Kern-dev</a>.
 
             Sometimes the binary package name doesn't match the source package name. Try a "apt-cache search package",
@@ -170,13 +171,13 @@ RUN docker-apt-install aoflagger</pre>
 
             <p>Don't panic! They are actually existing but in a different repository.
                 You can enable the debug repository by editing
-                <b>/etc/apt/sources.list.d/kernsuite-ubuntu-kern-3-xenial.list</b>
+                <b>/etc/apt/sources.list.d/kernsuite-ubuntu-kern-4-bionic.list</b>
                 and copying the line starting with <b>deb</b> and appending <b>/debug</b> to it.
                 It should look something like this:</p>
 
             <figure class="code"><pre><code>
-deb http://ppa.launchpad.net/kernsuite/kern-3/ubuntu xenial main
-deb http://ppa.launchpad.net/kernsuite/kern-3/ubuntu xenial main/debug
+deb http://ppa.launchpad.net/kernsuite/kern-4/ubuntu xenial main
+deb http://ppa.launchpad.net/kernsuite/kern-4/ubuntu xenial main/debug
             </code></pre></figure>
 
 
