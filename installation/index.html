@@ -10,7 +10,7 @@
             <h1 class="page-title">Installation guide</h1>
             <hr>
 
-            <h2 class="page-title">KERN-3 - Ubuntu 16.04</h2>
+            <h2 class="page-title">KERN-4 - Ubuntu 18.04</h2>
             <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
                 The current
                 release of KERN is KERN-4 and is based on Ubuntu 18.04 (Bionic). To enable the KERN-4 repository on a
@@ -54,21 +54,21 @@ RUN docker-apt-install meqtrees
 
             <hr>
 
-            <h2 class="page-title">KERN-4 - Ubuntu 18.04</h2>
+            <h2 class="page-title">KERN-3 - Ubuntu 16.04</h2>
 
-            We are currenty preparing for KERN-4, which happens in the KERN-dev repository:
+            If you are still using Ubuntu 16.04 you can use the previous release of KERN, KERN-3:
 
             <figure class="code"><pre><code>
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-dev
+$ sudo add-apt-repository -s ppa:kernsuite/kern-3
 $ sudo apt-add-repository multiverse restricted
 $ sudo apt-get update
 </code></pre></figure>
 
-            <p>Now you are ready to install some packages, for example presto:</p>
+            <p>Now you are ready to install some packages, for example meqtrees:</p>
             <figure class="code">
 <pre><code>
-$ sudo apt-get install presto
+$ sudo apt-get install meqtrees
 </code></pre>
             </figure>
 
