@@ -1,508 +1,2542 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KERN - Radio Astronomy Software Suite</title>
+---
+---
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-    <link href="kern.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="jumbotron">
-    <div class="container">
-
-        <a href="index.html"><img src="kern_small.jpg"></a>
-        <h1>PACKAGES OF KERN</h1>
-    </div>
-</div>
+{%  include header.html %}
 
 <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="alert alert-warning" role="alert">
-                To find out which versions in each release you should look at the launchpad page of the release.
-                Launchpad
-                pages for
-                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-1">KERN-1</a>,
-                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-2">KERN-2</a> and
-                <a href="https://launchpad.net/~kernsuite/+archive/ubuntu/kern-dev">Kern-dev<a/>.
-            </div>
-            <table class="table table-striped">
-                <tr>
-                    <th>source package name</th>
-                    <th>links</th>
-                    <th></th>
-                    <th>binary packages</th>
-                </tr>
-                <tr>
-                    <td>casa</td>
-                    <td><a href="https://casa.nrao.edu/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casalite">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>casalite</td>
-                </tr>
-                <tr>
-                    <td>casacore</td>
-                    <td><a href="https://github.com/casacore/casacore">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casacore">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>casacore</td>
-                </tr>
-                <tr>
-                    <td>casacore-data</td>
-                    <td><a href="https://github.com/casacore/casacore">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casacore-data">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>casacore-data</td>
-                </tr>
-                <tr>
-                    <td>casarest</td>
-                    <td><a href="https://github.com/casacore/casarest">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casarest">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>casarest</td>
-                </tr>
-                <tr>
-                    <td>casasynthesis</td>
-                    <td><a href="https://github.com/radio-astro/casasynthesis">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/casasynthesis">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>casasynthesis</td>
-                </tr>
-                <tr>
-                    <td>cassbeam</td>
-                    <td><a href="https://github.com/ratt-ru/cassbeam">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/cassbeam">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>cassbeam</td>
-                </tr>
-                <tr>
-                    <td>dspsr</td>
-                    <td><a href="http://dspsr.sourceforge.net/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/dspsr">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>dspsr</td>
-                </tr>
-                <tr>
-                    <td>greatcmakecookoff</td>
-                    <td><a href="https://github.com/UCL/GreatCMakeCookOff">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/greatcmakecookoff">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>greatcmakecookoff</td>
-                </tr>
-                <tr>
-                    <td>kittens</td>
-                    <td><a href="https://github.com/ska-sa/kittens">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/kittens">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-kittens</td>
-                </tr>
-                <tr>
-                    <td>lofar</td>
-                    <td><a href="svn.astron.nl/LOFAR/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/lofar">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>lofar</td>
-                </tr>
-                <tr>
-                    <td>makems</td>
-                    <td><a href="https://github.com/ska-sa/makems">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/makems">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>makems</td>
-                </tr>
-                <tr>
-                    <td>meqtrees-cattery</td>
-                    <td><a href="https://github.com/ska-sa/meqtrees-cattery">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/meqtrees-cattery">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-meqtrees-cattery</td>
-                </tr>
-                <tr>
-                    <td>meqtrees-timba</td>
-                    <td><a href="https://github.com/ska-sa/meqtrees-timba">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/meqtrees-timba">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-meqtrees-timba</td>
-                </tr>
-                <tr>
-                    <td>mt-imager</td>
-                    <td><a href="https://github.com/ska-sa/mt-imager">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/mt-imager">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>mt-imager</td>
-                </tr>
-                <tr>
-                    <td>multinest</td>
-                    <td><a href="https://ccpforge.cse.rl.ac.uk/gf/project/multinest/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/multinest">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>multinest</td>
-                </tr>
-                <tr>
-                    <td>obit</td>
-                    <td><a href="http://www.cv.nrao.edu/~bcotton/Obit.html">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/obit">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>obit</td>
-                </tr>
-                <tr>
-                    <td>oskar</td>
-                    <td><a href="http://www.oerc.ox.ac.uk/~ska/oskar2/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/oskar">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>oskar</td>
-                </tr>
-                <tr>
-                    <td>owlcat</td>
-                    <td><a href="https://github.com/ska-sa/owlcat">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/owlcat">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-owlcat</td>
-                </tr>
-                <tr>
-                    <td>parseltongue</td>
-                    <td><a href="http://www.jive.nl/jivewiki/doku.php?id=parseltongue:parseltongue">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/parseltongue">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>parseltongue</td>
-                </tr>
-                <tr>
-                    <td>presto</td>
-                    <td><a href="https://github.com/scottransom/presto/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/presto">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>presto</td>
-                </tr>
-                <tr>
-                    <td>psrcat</td>
-                    <td><a href="http://www.atnf.csiro.au/people/pulsar/psrcat/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/psrcat">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>psrcat</td>
-                </tr>
-                <tr>
-                    <td>psrchive</td>
-                    <td><a href="http://psrchive.sourceforge.net/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/psrchive">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>psrchive</td>
-                </tr>
-                <tr>
-                    <td>purify</td>
-                    <td><a href="https://github.com/basp-group/purify">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/purify">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>purify</td>
-                </tr>
-                <tr>
-                    <td>purr</td>
-                    <td><a href="https://github.com/ska-sa/purr">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/purr">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>purr</td>
-                </tr>
-                <tr>
-                    <td>pymoresane</td>
-                    <td><a href="https://github.com/ratt-ru/PyMORESANE">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/pymoresane">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>pymoresane</td>
-                </tr>
-                <tr>
-                    <td>python-casacore</td>
-                    <td><a href="https://github.com/casacore/python-casacore">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/python-casacore">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-casacore</td>
-                </tr>
-                <tr>
-                    <td>pyxis</td>
-                    <td><a href="https://github.com/ska-sa/pyxis">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/pyxis">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>pyxis</td>
-                </tr>
-                <tr>
-                    <td>rpfits</td>
-                    <td><a href="http://www.atnf.csiro.au/computing/software/rpfits.html">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/rpfits">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>rpfits</td>
-                </tr>
-                <tr>
-                    <td>sagecal</td>
-                    <td><a href="https://sourceforge.net/projects/sagecal/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sagecal">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>sagecal</td>
-                </tr>
-                <tr>
-                    <td>sigproc</td>
-                    <td><a href="http://sigproc.sourceforge.net/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sigproc">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>sigproc</td>
-                </tr>
-                <tr>
-                    <td>sopt</td>
-                    <td><a href="https://github.com/astro-informatics/sopt">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sopt">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>sopt</td>
-                </tr>
-                <tr>
-                    <td>sourcery</td>
-                    <td><a href="https://github.com/radio-astro/sourcery">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/sourcery">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-sourcery</td>
-                </tr>
-                <tr>
-                    <td>tempo</td>
-                    <td><a href="https://sourceforge.net/projects/tempo">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tempo">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>tempo</td>
-                </tr>
-                <tr>
-                    <td>tempo2</td>
-                    <td><a href="https://bitbucket.org/psrsoft/tempo2/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tempo2">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>tempo2</td>
-                </tr>
-                <tr>
-                    <td>tigger</td>
-                    <td><a href="https://github.com/ska-sa/tigger">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tigger">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-tigger</td>
-                </tr>
-                <tr>
-                    <td>wsclean</td>
-                    <td><a href="http://sourceforge.net/projects/wsclean/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/wsclean">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>wsclean</td>
-                </tr>
-                <tr>
-                    <td>chgcentre</td>
-                    <td><a href="https://sourceforge.net/p/wsclean/wiki/chgcentre/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/chgcentre">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>chgcentre</td>
-                </tr>
-                <tr>
-                    <td>tkp</td>
-                    <td><a href="https://github.com/transientskp/tkp/">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td><a href="https://github.com/kernsuite-debian/tkp">
-                        <button type="button" class="btn primary" aria-label="website"><span
-                                class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                    </a></td>
-                    <td>python-tkp</td>
-                </tr>
-            </table>
+    <div class="row justify-content-md-center">
+
+        <div class="col col-lg-8 bg-light border border-white">
+
+            <h1 class="page-title">Packages in KERN</h1>
+
+            <hr>
+    
+
+            <h3>KERN-4 (Ubuntu 18.04, Bionic)</h3>
+
+            <p>Please note that some packages (like Casacore) are now in the Ubuntu
+            repository, so not listed here.
+    
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/andreimesinger/21cmFAST'><h5>21cmfast</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>a seminumeric modelling tool to efficiently simulate the cosmological 21-cm signal</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>21cmfast</i>
         </div>
     </div>
+</div>
+<p>
+        
 
-</body>
-</html>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.aips.nrao.edu/'><h5>aips</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>variety of ancillary tasks on Astronomical Data</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>aips</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/bcj/AttrDict'><h5>attrdict</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Dictionary that allows attribute-style access (Python 3)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-attrdict, python3-attrdict</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://pypi.python.org/pypi/bitshuffle/'><h5>bitshuffle</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>filter for improving typed data compression.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-bitshuffle, python3-bitshuffle</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/UCBerkeleySETI/bl_sigproc'><h5>bl-sigproc</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Breakthrough Listen fork of SigProc tools</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>bl-sigproc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/UCBerkeleySETI/blimpy'><h5>blimpy</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Breakthrough Listen I/O Methods</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>blimpy, python-blimpy, python3-blimpy</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/blitzpp/blitz/'><h5>blitz</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>C++ template class library providing array objects</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>libblitz0-dev, libblitz0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://casa.nrao.edu/casa_obtaining.shtml'><h5>casalite</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Common Astronomy Software Application</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>casalite</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/casacore/casarest/'><h5>casarest</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>standalone radio interferometric imager derived from CASA</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>casarest</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/radio-astro/casasynthesis'><h5>casasynthesis</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>The synthesis CASA 4.4 submodule as a standalone project</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>libcasasynthesis-dev, libcasasynthesis1</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/p/wsclean/wiki/chgcentre/'><h5>chgcentre</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>used to change the phase centre of a measurement set.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>chgcentre</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/davidjamesca/ctypesgen'><h5>ctypesgen</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Pure-python wrapper generator for ctypes</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>ctypesgen</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://nvlabs.github.io/cub'><h5>cub</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>flexible library of cooperative threadblock primitives and other</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>cub-dev</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/saopicc/DDFacet'><h5>ddfacet</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>A facet-based radio imaging package.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>ddfacet</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ewanbarr/dedisp'><h5>dedisp</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>CUDA Based De-dispersion library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>dedisp-dev, libdedisp1</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ajameson/dedisp'><h5>dedisp-ajameson</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>CUDA Based De-dispersion library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>dedisp-ajameson-dev, libdedisp-ajameson1</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='ftp://ftp.astro.caltech.edu/pub/difmap/difmap.html'><h5>difmap</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Difference mapping interferometry tool.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>difmap</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/timstaley/drive-casa'><h5>drive-casa</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python package for scripting the NRAO CASA pipeline routines</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>drive-casa</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/aroffringa/dysco'><h5>dysco</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Compressing storage manager for Casacore mearement sets</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>dysco, dyscostma-dev, libdyscostman0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/lofar-astron/factor'><h5>factor</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Facet calibration for LOFAR (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>factor</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/GalSim-developers/GalSim'><h5>galsim</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>simulating images of astronomical objects</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>galsim-dev, galsim, python-galsim, libgalsim1.5</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/UCBerkeleySETI/gbt_seti/'><h5>gbt-seti</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>GUPPI and Breakthrough Listen instruments tools</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>gbt-seti</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/bartscheers/gsm'><h5>gsm</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Native python3 client API for monetDB</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-gsm, python3-gsm</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/demorest/guppi_daq'><h5>guppi-daq</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Data aquisition software for GUPPI</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-guppi-daq</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/projects/heimdall-astro/'><h5>heimdall-astro</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>GPU accelerated transient detection pipeline for radio astronomy</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>heimdall-astro</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.atnf.csiro.au/computing/software/karma/'><h5>karma</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>toolkit for interprocess communications, authentication, encryption, graphics display, user interface and manipulating the Karma network data structure</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>karma</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/katdal'><h5>katdal</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Data access library for the MeerKAT project</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-katdal</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/katpoint'><h5>katpoint</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Karoo Array Telescope pointing coordinate library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-katpoint</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/katversion'><h5>katversion</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Provides proper versioning for Python packages</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-katversion</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/kittens'><h5>kittens</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Collection of Python utility functions for purr, tigger, meqtrees and others</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>kittens, python-astro-kittens, python3-astro-kittens</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.lofar.org'><h5>lofar</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>a lofar lib</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>lofar, lofar-dev, lofar-doc, python-lofar, libapplcommon0, libbbscontrol0, libbbskernel0, libblob0, libcommon0, libdocker0, libdppp-aoflag0, libdppp-ddecal0, libdppp-pythondppp0, libdppp0, libelementresponse0, liblmwcommon0, liblofar-pyparameterset0, liblofar-pyparmdb0, liblofar-pystationresponse0, liblofar-pytools0, liblofarstman0, libmessagebus0, libms0, libmslofar0, libparmdb0, libplc0, libspwcombine0, libstationresponse0, libtransport0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/revoltek/losoto'><h5>losoto</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>LOFAR solutions tool (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>losoto</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/darafferty/LSMTool/'><h5>lsmtool</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>LOFAR Local Sky Model Tool  (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>lsmtool</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/meqtrees-cattery'><h5>meqtrees-cattery</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Meta package that depends on all MeqTrees subprojects.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-meqtrees-cattery, meqtrees</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.astron.nl/meqwiki/MeqTrees'><h5>meqtrees-timba</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>implementing and solving arbitrary Measurement Equations</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>meqtrees-timba, python-meqtrees-timba, libmeqtrees-timba0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/SpheMakh/msutils'><h5>msutils</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>A set of CASA Measurement Set manipulation tools</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>msutils</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/JohannesBuchner/MultiNest'><h5>multinest</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>a Bayesian inference tool</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>multinest</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.c6.nrao.edu/~bcotton/Obit.html'><h5>obit</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Obit for ParselTongue</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>obit</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/owlcat'><h5>owlcat</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Meta package for python-owlcat</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-owlcat, owlcat</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ewanbarr/peasoup'><h5>peasoup</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>C++/CUDA GPU pulsar searching library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>peasoup</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.j-raedler.de/projects/polygon'><h5>polygon2</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Polygon is a Python package that handles polygonal shapes in 2D.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>polygon2</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/npat-efault/ppgplot'><h5>ppgplot</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Pythonic Interface to PGPLOT</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>ppgplot</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/lofar-astron/prefactor'><h5>prefactor</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Pre facet calibration pipeline (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>prefactor</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/scottransom/presto/'><h5>presto</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Large suite of pulsar search and analysis software</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>presto, python-presto</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.atnf.csiro.au/people/pulsar/psrcat/'><h5>psrcat</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>ATNF Pulsar Catalogue</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>psrcat</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://psrchive.sourceforge.net/'><h5>psrchive</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>C++ development library for the analysis of pulsar astronomical data</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>psrchive</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://psrdada.sourceforge.net/'><h5>psrdada</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Distributed Acquisition and Data Analysis</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>psrdada</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/purr'><h5>purr</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Data reduction logging tool, Useful for remembering reductions</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>purr, python-purr</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.astron.nl/citt/pybdsf/'><h5>pybdsf</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python Blob Detection and Source Finder</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>pybdsf</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/pyFFTW/pyFFTW'><h5>pyfftw</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pyFFTW is a pythonic wrapper around FFTW 3, the</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-pyfftw, python3-pyfftw</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/gijzelaerr/pymonetdb'><h5>pymonetdb</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Native python3 client API for monetDB</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-pymonetdb, python3-pymonetdb</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ratt-ru/PyMORESANE'><h5>pymoresane</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Meta package for pymoresane</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-pymoresane, pymoresane</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://pypi.python.org/pypi/pySLALIB/'><h5>pyslalib</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>f2py and numpy based wrappers for SLALIB</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-slalib, python3-slalib</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/pyxis'><h5>pyxis</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python Extensions for Interferometry Scripting</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>pyxis, python-pyxis</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/bennahugo/RFIMasker'><h5>rfimasker</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Tool to apply RFI masks</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-rfimasker, rfimasker</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/AA-ALERT/ringbuffer-sc4'><h5>ringbuffer-sc4</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>copy data from the network into a ringbuffer and do checking</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>ringbuffer-sc4</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/lofar-astron/RMextract/'><h5>rmextract</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>LOFAR solutions tool (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>rmextract</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.atnf.csiro.au/computing/software/rpfits.html'><h5>rpfits</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>data-recording format</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>rpfits</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/projects/sagecal/'><h5>sagecal</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>GPU accelerated radio interferometric calibration</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sagecal</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/krosenfeld/scatterbrane'><h5>scatterbrane</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>adding realistic scattering to astronomical images</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-scatterbrane</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.aoc.nrao.edu/~cwalker/sched/sched.html'><h5>sched</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>VLBI scheduling tool</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sched</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://gitlab.com/tenzing/shared-array'><h5>sharedarray</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>share numpy arrays with other processes on the same computer</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-sharedarray, python3-sharedarray</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://nikitathespider.com/python/shm/'><h5>shm</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>System V shared memory and semaphores</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-shm</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/SixByNine/sigproc'><h5>sigproc</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pulsar search and analysis software</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sigproc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ewanbarr/sigpyproc'><h5>sigpyproc</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python-based pulsar search data manipulation package</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sigpyproc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/mariogrs/Simfast21'><h5>simfast21</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>generates a simulation of the cosmological 21cm signal</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>simfast21</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/radio-astro/simms'><h5>simms</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Creates empty measurement sets using the the CASA simulate tool</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>simms</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.sylabs.io'><h5>singularity-container</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>container platform focused on supporting "Mobility of Compute"</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>singularity-container</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/radio-astro/sourcery'><h5>sourcery</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Tools for creating high fidelity source catalogues from radio interferometric datasets</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-sourcery</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/SpheMakh/Stimela'><h5>stimela</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Dockerized Radio Interferometry Scripting Framework</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>stimela</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/projects/tempo/'><h5>tempo</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pulsar timing data analysis package</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tempo</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://bitbucket.org/psrsoft/tempo2/'><h5>tempo2</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pulsar timing package</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tempo2</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/tigger'><h5>tigger</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>FITS and MeqTrees LSM viewer, python 2 library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tigger, python-astro-tigger</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/tigger-lsm'><h5>tigger-lsm</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>FITS and MeqTrees LSM file tools</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tigger-lsm, python-astro-tigger-lsm</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://gigjozsa.github.io/tirific/'><h5>tirific</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>simulate kinematical and morphological models</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tirific</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/transientskp/tkp'><h5>tkp</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>A transients-discovery pipeline for astronomical image-based surveys</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-tkp</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/rmjarvis/tmv'><h5>tmv</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Fast, intuitive C++ linear algebra library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tmv-dev, libtmv-symband0, libtmv0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/pytransitions/transitions'><h5>transitions</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>lightweight, object-oriented finite state machine implementation</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-transitions, python3-transitions</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/UCBerkeleySETI/turbo_seti'><h5>turbo-seti</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>analysis tool for the search of narrow band drifting signals</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-turbo-seti, turbo-seti</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+            <h3>KERN-3 (Ubuntu 16.04, Xenial)</h3>
+
+            <p>
+    
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/andreimesinger/21cmFAST'><h5>21cmfast</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>a seminumeric modelling tool to efficiently simulate the cosmological 21-cm signal</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>21cmfast</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.aips.nrao.edu/'><h5>aips</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>calibration, data analysis, image display, plotting, and a variety of ancillary tasks on Astronomical Data</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>aips</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://sourceforge.net/projects/aoflagger/'><h5>aoflagger</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Find RFI in radio astronomical observations (shared lib)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>aoflagger, aoflagger-dev, libaoflagger0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/bcj/AttrDict'><h5>attrdict</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Dictionary that allows attribute-style access (Python 3)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-attrdict, python3-attrdict</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://casacore.github.io/casacore'><h5>casacore</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>CASA table system</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>casacore-dev, casacore-doc, casacore-doc, casacore-tools, libcasa-casa2, libcasa-coordinates2, libcasa-derivedmscal2, libcasa-fits2, libcasa-images2, libcasa-lattices2, libcasa-meas2, libcasa-measures2, libcasa-mirlib2, libcasa-ms2, libcasa-msfits2, libcasa-python2, libcasa-python3-2, libcasa-scimath-f2, libcasa-scimath2, libcasa-tables2</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://casacore.github.io/casacore'><h5>casacore-data</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Casacore data files</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>casacore-data</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://casa.nrao.edu/casa_obtaining.shtml'><h5>casalite</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Common Astronomy Software Application</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>casalite</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/casacore/casarest/'><h5>casarest</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>standalone radio interferometric imager derived from CASA</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>casarest</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/radio-astro/casasynthesis'><h5>casasynthesis</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>The synthesis CASA 4.4 submodule as a standalone project</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>libcasasynthesis-dev, libcasasynthesis1</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ratt-ru/cassbeam'><h5>cassbeam</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Cassegrain antenna modelling</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>cassbeam</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/p/wsclean/wiki/chgcentre/'><h5>chgcentre</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>used to change the phase centre of a measurement set.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>chgcentre</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://nvlabs.github.io/cub'><h5>cub</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>flexible library of cooperative threadblock primitives and other</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>cub-dev</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ratt-ru/CubiCal'><h5>cubical</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>fast radio interferometric calibration routines</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>cubical</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.commonwl.org'><h5>cwltool</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Common workflow language reference implementation</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>cwltool</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='ftp://ftp.astro.caltech.edu/pub/difmap/difmap.html'><h5>difmap</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Difference mapping interferometry tool.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>difmap</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/timstaley/drive-casa'><h5>drive-casa</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python package for scripting the NRAO CASA pipeline routines</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>drive-casa</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://dspsr.sourceforge.net/'><h5>dspsr</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>library for digital signal processing of pulsar astronomical timeseries</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>dspsr</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/aroffringa/dysco'><h5>dysco</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Compressing storage manager for Casacore mearement sets</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>dysco, dyscostma-dev, libdyscostman0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/lofar-astron/factor'><h5>factor</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Facet calibration for LOFAR (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>factor</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/GalSim-developers/GalSim'><h5>galsim</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>simulating images of astronomical objects</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>galsim-dev, galsim, python-galsim, libgalsim1.5</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.atnf.csiro.au/computing/software/karma/'><h5>karma</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>toolkit for interprocess communications, authentication, encryption, graphics display, user interface and manipulating the Karma network data structure</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>karma</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/katdal'><h5>katdal</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Data access library for the MeerKAT project</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-katdal</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/katpoint'><h5>katpoint</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Karoo Array Telescope pointing coordinate library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-katpoint</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/katversion'><h5>katversion</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Provides proper versioning for Python packages</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-katversion</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/kittens'><h5>kittens</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Collection of Python utility functions for purr, tigger, meqtrees and others</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>kittens, python-kittens</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.lofar.org'><h5>lofar</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>a lofar lib</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>lofar, lofar-dev, lofar-doc, python-lofar, libapplcommon0, libbbscontrol0, libbbskernel0, libblob0, libcommon0, libdocker0, libdppp-aoflag0, libdppp-ddecal0, libdppp-pythondppp0, libdppp0, libelementresponse0, liblmwcommon0, liblofar-pyparameterset0, liblofar-pyparmdb0, liblofar-pystationresponse0, liblofar-pytools0, liblofarstman0, libmessagebus0, libms0, libmslofar0, libparmdb0, libplc0, libspwcombine0, libstationresponse0, libtransport0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/revoltek/losoto'><h5>losoto</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>LOFAR solutions tool (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>losoto</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/darafferty/LSMTool/'><h5>lsmtool</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>LOFAR Local Sky Model Tool  (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>lsmtool</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/makems'><h5>makems</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>tool to create empty Measurement Sets</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>makems</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/meqtrees-cattery'><h5>meqtrees-cattery</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Meta package that depends on all MeqTrees subprojects.</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-meqtrees-cattery, meqtrees</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.astron.nl/meqwiki/MeqTrees'><h5>meqtrees-timba</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>implementing and solving arbitrary Measurement Equations</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>meqtrees-timba, python-meqtrees-timba, libmeqtrees-timba0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/montblanc'><h5>montblanc</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>A PyCUDA implementation of the RIME</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-montblanc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/SpheMakh/msutils'><h5>msutils</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>A set of CASA Measurement Set manipulation tools</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>msutils</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.mtimager.com/'><h5>mt-imager</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>high performance image synthesiser for radio interferometry</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>mt-imager</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/JohannesBuchner/MultiNest'><h5>multinest</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>a Bayesian inference tool</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>multinest</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.c6.nrao.edu/~bcotton/Obit.html'><h5>obit</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Obit for ParselTongue</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>obit</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.oerc.ox.ac.uk/~ska/oskar2/'><h5>oskar</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Simulator for the Open Square Kilometre Array Radio Telescope</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>oskar</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/owlcat'><h5>owlcat</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Meta package for python-owlcat</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-owlcat, owlcat</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.jive.nl/jivewiki/doku.php?id=parseltongue:parseltongue'><h5>parseltongue</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python scripting interface for classic AIPS</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>parseltongue</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/npat-efault/ppgplot'><h5>ppgplot</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Pythonic Interface to PGPLOT</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>ppgplot</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/lofar-astron/prefactor'><h5>prefactor</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Pre facet calibration pipeline (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>prefactor</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/scottransom/presto/'><h5>presto</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Large suite of pulsar search and analysis software</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>presto, python-presto</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.atnf.csiro.au/people/pulsar/psrcat/'><h5>psrcat</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>ATNF Pulsar Catalogue</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>psrcat</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://psrchive.sourceforge.net/'><h5>psrchive</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>C++ development library for the analysis of pulsar astronomical data</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>psrchive</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/purr'><h5>purr</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Data reduction logging tool, Useful for remembering reductions</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>purr, python-purr</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.astron.nl/citt/pybdsf/'><h5>pybdsf</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python Blob Detection and Source Finder</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>pybdsf</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ratt-ru/PyMORESANE'><h5>pymoresane</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Meta package for pymoresane</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-pymoresane, pymoresane</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://pyqwt.sourceforge.net/'><h5>pyqwt5</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python Qwt5 technical widget library, documentation and examples</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-qwt5-qt4, python-qwt5-doc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/casacore/python-casacore'><h5>python-casacore</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python 3 bindings to the casacore library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-casacore, python3-casacore</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/wikier/keepalive'><h5>python-keepalive</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>urllib keepalive support for Python 3</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-keepalive, python3-keepalive</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://pypi.python.org/pypi/typing/'><h5>python-typing</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Backport of the standard 3.5 library typing module</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-typing</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://pypi.python.org/pypi/pyvo'><h5>pyvo</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python 3 library for data services of the Virtual observatory (VO)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-pyvo, python3-pyvo</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/pyxis'><h5>pyxis</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python Extensions for Interferometry Scripting</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>pyxis, python-pyxis</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/bennahugo/RFIMasker'><h5>rfimasker</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Tool to apply RFI masks</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-rfimasker, rfimasker</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/lofar-astron/RMextract/'><h5>rmextract</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>LOFAR solutions tool (Python 2)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>rmextract</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.atnf.csiro.au/computing/software/rpfits.html'><h5>rpfits</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>data-recording format</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>rpfits</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/projects/sagecal/'><h5>sagecal</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>very fast, memory efficient and GPU accelerated radio interferometric calibration program</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sagecal</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/krosenfeld/scatterbrane'><h5>scatterbrane</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>adding realistic scattering to astronomical images</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-scatterbrane</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://www.aoc.nrao.edu/~cwalker/sched/sched.html'><h5>sched</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>VLBI scheduling tool</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sched</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://gitlab.com/tenzing/shared-array'><h5>sharedarray</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>share numpy arrays with other processes on the same computer</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-sharedarray, python3-sharedarray</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/SixByNine/sigproc'><h5>sigproc</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pulsar search and analysis software</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sigproc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ewanbarr/sigpyproc'><h5>sigpyproc</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Python-based pulsar search data manipulation package</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sigpyproc</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/mariogrs/Simfast21'><h5>simfast21</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>generates a simulation of the cosmological 21cm signal</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>simfast21</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/radio-astro/simms'><h5>simms</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Creates empty measurement sets using the the CASA simulate tool</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>simms</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://singularity.lbl.gov'><h5>singularity-container</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>container platform focused on supporting "Mobility of Compute"</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>singularity-container</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://basp-group.github.io/sopt/'><h5>sopt</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Sparse OPTimisation shared library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>libsopt-dev, libsopt2.0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/radio-astro/sourcery'><h5>sourcery</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Tools for creating high fidelity source catalogues from radio interferometric datasets</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-sourcery</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/SpheMakh/Stimela'><h5>stimela</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Dockerized Radio Interferometry Scripting Framework</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>stimela</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/gigjozsa/sunblocker'><h5>sunblocker</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>remove solar-like RFI from interferometric data</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>sunblocker</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/projects/tempo/'><h5>tempo</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pulsar timing data analysis package</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tempo</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://bitbucket.org/psrsoft/tempo2/'><h5>tempo2</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>pulsar timing package</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tempo2</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/tigger'><h5>tigger</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>dependency package for FITS and MeqTrees LSM viewer</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-tigger, tigger</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/ska-sa/tigger-lsm'><h5>tigger-lsm</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>dependency package for FITS and MeqTrees LSM viewer</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-tigger-lsm, tigger-lsm</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='http://gigjozsa.github.io/tirific/'><h5>tirific</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>simulate kinematical and morphological models</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tirific</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/transientskp/tkp'><h5>tkp</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>A transients-discovery pipeline for astronomical image-based surveys</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-tkp</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/rmjarvis/tmv'><h5>tmv</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Fast, intuitive C++ linear algebra library</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>tmv-dev, libtmv-symband0, libtmv0</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://github.com/pytransitions/transitions'><h5>transitions</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>lightweight, object-oriented finite state machine implementation</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>python-transitions, python3-transitions</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class='col-3 bg-light border border-white'>
+            <a href='https://sourceforge.net/projects/wsclean/'><h5>wsclean</h5></a>
+        </div>
+        <div class='col-9 bg-light border border-white'>
+            <b>Fast generic widefield interferometric imager (development files)</b>
+        </div>
+        <div class='col-9 offset-3 bg-light border border-white'>
+            binary packages: <i>wsclean, libwsclean0, wsclean-dev</i>
+        </div>
+    </div>
+</div>
+<p>
+        
+
+
+
+{%  include footer.html %}
+    
