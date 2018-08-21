@@ -1,6 +1,6 @@
 
 ALL: run
-.PHONY: run
+.PHONY: run update packages
 
 
 run:
@@ -8,4 +8,7 @@ run:
 
 update:
 	bundle update
+
+packages:
+	python3 update.py > packages/index.html
 
