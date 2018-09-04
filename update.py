@@ -110,7 +110,7 @@ if __name__ == "__main__":
                 </div>
                 <div class="tab-pane fade" id="KERN-dev" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <h3 class="display-4">KERN-dev</h3>
-                    <h3>Ubuntu 18.04, Xenial</h3>
+                    <h3>Ubuntu 18.04, Bionic</h3>
                     <hr>
 
     """)
