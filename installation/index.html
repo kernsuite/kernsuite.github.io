@@ -52,6 +52,17 @@ RUN docker-apt-install meqtrees
             fetch the package list of the Ubuntu archive, install the requested package and finally clean up the
             temporary cache. This keeps the Docker image small.
 
+            You can also bootstrap a Singularity image using the Docker image:
+            <figure class="code">
+<pre><code>
+Bootstrap: docker
+From:kernsuite/base:4
+%post
+    docker-apt-install meqtrees
+</code></pre>
+</figure>
+
+
             <hr>
 
             <h2 class="page-title">KERN-3 - Ubuntu 16.04</h2>
