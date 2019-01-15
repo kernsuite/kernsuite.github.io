@@ -72,6 +72,7 @@ def print_list(source_packages):
 
 
 if __name__ == "__main__":
+    source_packages_5 = gather_data(version=5, dist="bionic")
     source_packages_4 = gather_data(version=4, dist="bionic")
     source_packages_dev = gather_data(version="dev", dist="bionic")
     source_packages_3 = gather_data(version=3, dist="xenial")
@@ -88,23 +89,21 @@ if __name__ == "__main__":
     
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#KERN-4" role="tab" aria-controls="nav-home" aria-selected="true">KERN-4</a>
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#KERN-5" role="tab" aria-controls="nav-home" aria-selected="true">KERN-5</a>
                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#KERN-dev" role="tab" aria-controls="nav-profile" aria-selected="false">KERN-dev</a>
+                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-4" role="tab" aria-controls="nav-home" aria-selected="true">KERN-4</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#KERN-3" role="tab" aria-controls="nav-contact" aria-selected="false">KERN-3</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="KERN-4" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <h3 class="display-4">KERN-4</h3>
+                    <div class="tab-pane fade show active" id="KERN-5" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <h3 class="display-4">KERN-5</h3>
                         <h3>Ubuntu 18.04, Bionic</h3>
             
-                        <p>Please note that some packages (like Casacore) are now in the Ubuntu
-                        repository, so not listed here.
-                        
                         <hr>
     """)
 
-    print_list(source_packages_4)
+    print_list(source_packages_5)
 
     print("""
                 </div>
@@ -116,6 +115,18 @@ if __name__ == "__main__":
     """)
 
     print_list(source_packages_dev)
+
+    print("""
+                </div>
+                <div class="tab-pane fade" id="KERN-4" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h3 class="display-4">KERN-4</h3>
+                    <h3>Ubuntu 18.04, Bionic</h3>
+                    <hr>
+
+    """)
+
+    print_list(source_packages_4)
+
 
     print("""
                 </div>

@@ -1,0 +1,35 @@
+---
+---
+
+{%  include header.html %}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col col-lg-8 bg-light border border-white">
+
+            <h1 class="page-title">International Mirror</h1>
+            <hr>
+
+            <h2>Netherlands</h2>
+            <p>We have set up an experimental KERN archive mirror for KERN-5 sponsored by <a href="http://astron.nl">ASTRON</a>. More mirrors might follow. Please note that for now this mirror is experimental, things might break and packages slightly outdated.</p>
+
+            <p>To enable the mirror on Ubutnu 18.04 please run:</p>
+
+<figure class="code">
+<pre><code>
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -s https://archive.kernsuite.info/kernsuite/kern-5/ubuntu
+$ curl -L https://archive.kernsuite.info/kern.key | sudo apt-key add -
+$ sudo apt-add-repository multiverse restricted
+$ sudo apt-get update
+</code></pre>
+            </figure>
+
+            <p>Lets us know when you experience any issues in our <a href="https://github.com/kernsuite/packaging/issues">issue tracker</a>.</p>
+            <hr>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

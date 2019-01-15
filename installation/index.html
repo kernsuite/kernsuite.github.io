@@ -10,10 +10,10 @@
             <h1 class="page-title">Installation guide</h1>
             <hr>
 
-            <h2 class="page-title">KERN-4 - Ubuntu 18.04</h2>
+            <h2 class="page-title">KERN-5 - Ubuntu 18.04</h2>
             <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
                 The current
-                release of KERN is KERN-4 and is based on Ubuntu 18.04 (Bionic). To enable the KERN-4 repository on a
+                release of KERN is KERN-5 and is based on Ubuntu 18.04 (Bionic). To enable the KERN-5 repository on a
                 Ubuntu 18.04
                 system run:
             </p>
@@ -21,7 +21,7 @@
             <figure class="code">
 <pre><code>
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-4
+$ sudo add-apt-repository -s ppa:kernsuite/kern-5
 $ sudo apt-add-repository multiverse restricted
 $ sudo apt-get update
 </code></pre>
@@ -43,7 +43,7 @@ $ sudo apt-get install meqtrees
             and <a href="http://singularity.lbl.gov/">Singularity</a> images:
             <figure class="code">
 <pre><code>
-FROM kernsuite/base:4
+FROM kernsuite/base:5
 RUN docker-apt-install meqtrees
 </code></pre>
             </figure>
@@ -56,7 +56,7 @@ RUN docker-apt-install meqtrees
             <figure class="code">
 <pre><code>
 Bootstrap: docker
-From:kernsuite/base:4
+From:kernsuite/base:5
 %post
     docker-apt-install meqtrees
 </code></pre>
@@ -65,28 +65,9 @@ From:kernsuite/base:4
 
             <hr>
 
-            <h2 class="page-title">KERN-3 - Ubuntu 16.04</h2>
-
-            If you are still using Ubuntu 16.04 you can use the previous release of KERN, KERN-3:
-
-            <figure class="code"><pre><code>
-$ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-3
-$ sudo apt-add-repository multiverse restricted
-$ sudo apt-get update
-</code></pre></figure>
-
-            <p>Now you are ready to install some packages, for example meqtrees:</p>
-            <figure class="code">
-<pre><code>
-$ sudo apt-get install meqtrees
-</code></pre>
-            </figure>
-
-
             <h2 class="page-title">Older releases</h2>
 
-            The old releases are KERN-0 for Ubuntu 14.04, KERN-1 and KERN-2 for Ubuntu 16.04. These releases have
+            The old releases are KERN-0 for Ubuntu 14.04, KERN-1, KERN-2 and KERN-3 for Ubuntu 16.04. These releases have
             reached end of live and are not supported anymore. You can still use them though, also inside Docker
             containers.
 
