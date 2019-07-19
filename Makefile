@@ -3,6 +3,9 @@ ALL: run
 .PHONY: run update packages
 
 
+install:
+	bundle install
+
 run:
 	bundle exec jekyll serve
 
