@@ -10,10 +10,10 @@
             <h1 class="page-title">Installation guide</h1>
             <hr>
 
-            <h2 class="page-title">KERN-5 - Ubuntu 18.04</h2>
+            <h2 class="page-title">KERN-6 - Ubuntu 18.04</h2>
             <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
                 The current
-                release of KERN is KERN-5 and is based on Ubuntu 18.04 (Bionic). To enable the KERN-5 repository on a
+                release of KERN is KERN-6 and is based on Ubuntu 18.04 (Bionic). To enable the KERN-6 repository on a
                 Ubuntu 18.04
                 system run:
             </p>
@@ -21,7 +21,7 @@
             <figure class="code">
 <pre><code>
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-5
+$ sudo add-apt-repository -s ppa:kernsuite/kern-6
 $ sudo apt-add-repository multiverse
 $ sudo apt-add-repository restricted
 $ sudo apt-get update
@@ -44,7 +44,7 @@ $ sudo apt-get install meqtrees
             and <a href="http://singularity.lbl.gov/">Singularity</a> images:
             <figure class="code">
 <pre><code>
-FROM kernsuite/base:5
+FROM kernsuite/base:6
 RUN docker-apt-install meqtrees
 </code></pre>
             </figure>
@@ -57,7 +57,7 @@ RUN docker-apt-install meqtrees
             <figure class="code">
 <pre><code>
 Bootstrap: docker
-From:kernsuite/base:5
+From:kernsuite/base:6
 %post
     docker-apt-install meqtrees
 </code></pre>
