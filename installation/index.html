@@ -13,15 +13,15 @@
             <h2 class="page-title">KERN-6 - Ubuntu 18.04</h2>
             <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
                 The current
-                release of KERN is KERN-6 and is based on Ubuntu 18.04 (Bionic). To enable the KERN-6 repository on a
-                Ubuntu 18.04
+                release of KERN is KERN-7 and is based on Ubuntu 20.04 (Focal). To enable the KERN-7 repository on a
+                Ubuntu 20.04
                 system run:
             </p>
 
             <figure class="code">
 <pre><code>
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-6
+$ sudo add-apt-repository -s ppa:kernsuite/kern-7
 $ sudo apt-add-repository multiverse
 $ sudo apt-add-repository restricted
 $ sudo apt-get update
@@ -44,8 +44,8 @@ $ sudo apt-get install meqtrees
             and <a href="http://singularity.lbl.gov/">Singularity</a> images:
             <figure class="code">
 <pre><code>
-FROM kernsuite/base:6
-RUN docker-apt-install meqtrees
+FROM kernsuite/base:7
+RUN docker-apt-install python-casacore
 </code></pre>
             </figure>
 
@@ -57,9 +57,9 @@ RUN docker-apt-install meqtrees
             <figure class="code">
 <pre><code>
 Bootstrap: docker
-From:kernsuite/base:6
+From:kernsuite/base:7
 %post
-    docker-apt-install meqtrees
+    docker-apt-install python-casacore
 </code></pre>
 </figure>
 
@@ -68,8 +68,8 @@ From:kernsuite/base:6
 
             <h2 class="page-title">Older releases</h2>
 
-            The old releases are KERN-0 for Ubuntu 14.04, KERN-1, KERN-2 and KERN-3 for Ubuntu 16.04. These releases have
-            reached end of live and are not supported anymore. You can still use them though, also inside Docker
+            The old releases are KERN-0 for Ubuntu 14.04, KERN-1, KERN-2, KERN-3 for Ubuntu 16.04. KERN-5 and KERN-6 for Ubuntu 18.04.
+            These releases have reached end of live and are not supported anymore. You can still use them though, also inside Docker
             containers.
 
         </div>
