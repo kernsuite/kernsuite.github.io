@@ -3,7 +3,7 @@ from urllib.request import urlopen
 from gzip import GzipFile
 
 
-def gather_data(version="6", dist="bionic"):
+def gather_data(version="7", dist="focal"):
     sources = f"http://ppa.launchpad.net/kernsuite/kern-{version}/ubuntu/dists/{dist}/main/source/Sources.gz"
     packages = f"http://ppa.launchpad.net/kernsuite/kern-{version}/ubuntu/dists/{dist}/main/binary-amd64/Packages.gz"
 
@@ -72,6 +72,7 @@ def print_list(source_packages):
 
 
 if __name__ == "__main__":
+    source_packages_7 = gather_data(version=7, dist="focal")
     source_packages_6 = gather_data(version=6, dist="bionic")
     source_packages_5 = gather_data(version=5, dist="bionic")
     source_packages_4 = gather_data(version=4, dist="bionic")
@@ -90,7 +91,8 @@ if __name__ == "__main__":
     
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#KERN-6" role="tab" aria-controls="nav-home" aria-selected="true">KERN-6</a>
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#KERN-7" role="tab" aria-controls="nav-home" aria-selected="true">KERN-7</a>
+                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-6" role="tab" aria-controls="nav-home" aria-selected="true">KERN-6</a>
                         <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-5" role="tab" aria-controls="nav-home" aria-selected="true">KERN-5</a>
                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#KERN-dev" role="tab" aria-controls="nav-profile" aria-selected="false">KERN-dev</a>
                         <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-4" role="tab" aria-controls="nav-home" aria-selected="true">KERN-4</a>
@@ -99,10 +101,22 @@ if __name__ == "__main__":
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="KERN-6" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <h3 class="display-4">KERN-6</h3>
-                        <h3>Ubuntu 18.04, Bionic</h3>
+                        <h3 class="display-4">KERN-7</h3>
+                        <h3>Ubuntu 20.04, Focal</h3>
             
                         <hr>
+    """)
+
+    print_list(source_packages_7)
+
+
+    print("""
+                </div>
+                <div class="tab-pane fade" id="KERN-6" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h3 class="display-4">KERN-6</h3>
+                    <h3>Ubuntu 18.04, Bionic</h3>
+                    <hr>
+
     """)
 
     print_list(source_packages_6)
