@@ -32,7 +32,7 @@ $ sudo apt-get update
             <p>Now you are ready to install some packages, for example python-casacore:</p>
             <figure class="code">
 <pre><code>
-$ sudo apt-get install python-casacore
+$ sudo apt-get install python3-casacore
 </code></pre>
             </figure>
 
@@ -45,7 +45,7 @@ $ sudo apt-get install python-casacore
             <figure class="code">
 <pre><code>
 FROM kernsuite/base:7
-RUN docker-apt-install python-casacore
+RUN docker-apt-install python3-casacore
 </code></pre>
             </figure>
 
@@ -59,7 +59,7 @@ RUN docker-apt-install python-casacore
 Bootstrap: docker
 From:kernsuite/base:7
 %post
-    docker-apt-install python-casacore
+    docker-apt-install python3-casacore
 </code></pre>
 </figure>
 
