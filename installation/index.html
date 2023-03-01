@@ -10,10 +10,10 @@
             <h1 class="page-title">Installation guide</h1>
             <hr>
 
-            <h2 class="page-title">KERN-7 - Ubuntu 20.04</h2>
+            <h2 class="page-title">KERN-8 - Ubuntu 20.04</h2>
             <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
                 The current
-                release of KERN is KERN-7 and is based on Ubuntu 20.04 (Focal). To enable the KERN-7 repository on a
+                release of KERN is KERN-8 and is based on Ubuntu 20.04 (Focal). To enable the KERN-8 repository on a
                 Ubuntu 20.04
                 system run:
             </p>
@@ -21,7 +21,7 @@
             <figure class="code">
 <pre><code>
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-7
+$ sudo add-apt-repository -s ppa:kernsuite/kern-8
 $ sudo apt-add-repository multiverse
 $ sudo apt-add-repository restricted
 $ sudo apt-get update
@@ -44,7 +44,7 @@ $ sudo apt-get install python3-casacore
             and <a href="http://singularity.lbl.gov/">Singularity</a> images:
             <figure class="code">
 <pre><code>
-FROM kernsuite/base:7
+FROM kernsuite/base:8
 RUN docker-apt-install python3-casacore
 </code></pre>
             </figure>
@@ -57,7 +57,7 @@ RUN docker-apt-install python3-casacore
             <figure class="code">
 <pre><code>
 Bootstrap: docker
-From:kernsuite/base:7
+From:kernsuite/base:8
 %post
     docker-apt-install python3-casacore
 </code></pre>
