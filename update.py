@@ -102,7 +102,7 @@ if __name__ == "__main__":
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="KERN-7" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="tab-pane fade show active" id="KERN-8" role="tabpanel" aria-labelledby="nav-home-tab">
                         <h3 class="display-4">KERN-8</h3>
                         <h3>Ubuntu 20.04, Focal</h3>
             
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                     <hr>
 
     """)
-    
+
     print_list(source_packages_7)
 
 
