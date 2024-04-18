@@ -10,18 +10,18 @@
             <h1 class="page-title">Installation guide</h1>
             <hr>
 
-            <h2 class="page-title">KERN-8 - Ubuntu 20.04</h2>
-            <p>A new version of KERN is released roughly every 6 months and is based on the latest Ubuntu LTS release.
+            <h2 class="page-title">KERN-9 - Ubuntu 22.04</h2>
+            <p>A new version of KERN is released roughly every year and is based on the latest Ubuntu LTS release.
                 The current
-                release of KERN is KERN-8 and is based on Ubuntu 20.04 (Focal). To enable the KERN-8 repository on a
-                Ubuntu 20.04
+                release of KERN is KERN-9 and is based on Ubuntu 22.04 (Jammy). To enable the KERN-9 repository on a
+                Ubuntu 22.04
                 system run:
             </p>
 
             <figure class="code">
 <pre><code>
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository -s ppa:kernsuite/kern-8
+$ sudo add-apt-repository -s ppa:kernsuite/kern-9
 $ sudo apt-add-repository multiverse
 $ sudo apt-add-repository restricted
 $ sudo apt-get update
@@ -44,7 +44,7 @@ $ sudo apt-get install python3-casacore
             and <a href="http://singularity.lbl.gov/">Singularity</a> images:
             <figure class="code">
 <pre><code>
-FROM kernsuite/base:8
+FROM kernsuite/base:9
 RUN docker-apt-install python3-casacore
 </code></pre>
             </figure>
@@ -57,7 +57,7 @@ RUN docker-apt-install python3-casacore
             <figure class="code">
 <pre><code>
 Bootstrap: docker
-From:kernsuite/base:8
+From:kernsuite/base:9
 %post
     docker-apt-install python3-casacore
 </code></pre>
@@ -68,7 +68,7 @@ From:kernsuite/base:8
 
             <h2 class="page-title">Older releases</h2>
 
-            The old releases are KERN-0 for Ubuntu 14.04, KERN-1, KERN-2, KERN-3 for Ubuntu 16.04. KERN-4, KERN-5 and KERN-6 for Ubuntu 18.04. KERN-7 for Ubuntu 20.04. 
+            The old releases are KERN-0 for Ubuntu 14.04, KERN-1, KERN-2, KERN-3 for Ubuntu 16.04. KERN-4, KERN-5 and KERN-6 for Ubuntu 18.04. KERN-7 and KERN-8 for Ubuntu 20.04. 
             These releases have reached end of live and are not supported anymore. You can still use them though, also inside Docker
             containers.
 
