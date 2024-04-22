@@ -3,7 +3,7 @@ from urllib.request import urlopen
 from gzip import GzipFile
 
 
-def gather_data(version="8", dist="focal"):
+def gather_data(version="9", dist="focal"):
     sources = f"http://ppa.launchpad.net/kernsuite/kern-{version}/ubuntu/dists/{dist}/main/source/Sources.gz"
     packages = f"http://ppa.launchpad.net/kernsuite/kern-{version}/ubuntu/dists/{dist}/main/binary-amd64/Packages.gz"
 
@@ -72,7 +72,7 @@ def print_list(source_packages):
 
 
 if __name__ == "__main__":
-    source_packages_9 = gather_data(version=8, dist="jammy")
+    source_packages_9 = gather_data(version=9, dist="jammy")
     source_packages_8 = gather_data(version=8, dist="focal")
     source_packages_7 = gather_data(version=7, dist="focal")
     source_packages_6 = gather_data(version=6, dist="bionic")
