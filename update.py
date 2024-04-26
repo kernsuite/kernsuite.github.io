@@ -111,7 +111,7 @@ if __name__ == "__main__":
                         <hr>
     """)
 
-    print_list(source_packages_8)
+    print_list(source_packages_9)
 
     print("""
                 </div>
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     """)
 
-    print_list(source_packages_7)
+    print_list(source_packages_8)
     
     print("""
                 </div>
