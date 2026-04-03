@@ -68,10 +68,11 @@ def print_list(source_packages):
     </div>
 </div>
 <p>
-        """.format(homepage=d["Homepage"], package=d["Package"], description=d["Description"], binpack=binpack))
+        """.format(homepage=d.get("Homepage", "#"), package=d["Package"], description=d["Description"], binpack=binpack))
 
 
 if __name__ == "__main__":
+    source_packages_10 = gather_data(version=10, dist="noble")
     source_packages_9 = gather_data(version=9, dist="jammy")
     source_packages_8 = gather_data(version=8, dist="focal")
     source_packages_7 = gather_data(version=7, dist="focal")
@@ -93,7 +94,8 @@ if __name__ == "__main__":
     
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#KERN-9" role="tab" aria-controls="nav-home" aria-selected="true">KERN-9</a>
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#KERN-10" role="tab" aria-controls="nav-home" aria-selected="true">KERN-10</a>
+                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-9" role="tab" aria-controls="nav-home" aria-selected="true">KERN-9</a>
                         <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-8" role="tab" aria-controls="nav-home" aria-selected="true">KERN-8</a>
                         <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-7" role="tab" aria-controls="nav-home" aria-selected="true">KERN-7</a>
                         <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#KERN-6" role="tab" aria-controls="nav-home" aria-selected="true">KERN-6</a>
@@ -104,11 +106,22 @@ if __name__ == "__main__":
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="KERN-9" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <h3 class="display-4">KERN-9</h3>
-                        <h3>Ubuntu 22.04, Jammy</h3>
+                    <div class="tab-pane fade show active" id="KERN-10" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <h3 class="display-4">KERN-10</h3>
+                        <h3>Ubuntu 24.04, noble</h3>
             
                         <hr>
+    """)
+
+    print_list(source_packages_10)
+
+    print("""
+                </div>
+                <div class="tab-pane fade" id="KERN-9" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h3 class="display-4">KERN-9</h3>
+                    <h3>Ubuntu 22.04, Jammy</h3>
+                    <hr>
+
     """)
 
     print_list(source_packages_9)
